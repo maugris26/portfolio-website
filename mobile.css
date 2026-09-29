@@ -1,0 +1,4958 @@
+/* =========================================================
+   IPHONE RESPONSIVE LAYER
+   FILE: mobile.css
+
+   DESKTOP REMAINS CONTROLLED BY style.css
+   IPAD RULES LIVE IN IPAD.CSS
+========================================================= */
+
+
+/* =========================================================
+   IPHONE — SHARED
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .toc-mobile-section,
+    .toc-mobile-stage,
+    .toc-landscape-section,
+    .resume-label-mobile,
+    .project-personal-page .personal-back-mobile {
+        display: none;
+    }
+
+    .resume-page ~ .bottom-nav .resume-mobile-contents {
+        display: none !important;
+    }
+
+/* =========================================================
+
+   RUSSELL — MOBILE COVER BUBBLES
+
+   SMALL / FILLED / NO HOVER
+
+========================================================= */
+
+
+
+.project-russell-page .cover-bubble {
+
+
+
+    width: 12px;
+
+    height: 12px;
+
+
+
+    border: none;
+
+    border-radius: 50%;
+
+
+
+    animation:
+
+        russell-mobile-bubble-beat
+
+        1.6s
+
+        ease-in-out
+
+        infinite;
+
+
+
+    box-shadow: none;
+
+}
+
+
+
+
+
+/* Remove desktop hover behavior */
+
+
+
+.project-russell-page .cover-bubble:hover {
+
+
+
+    animation-play-state: running;
+
+
+
+    transform:
+
+        translate(-50%, -50%)
+
+        scale(1);
+
+}
+
+
+
+
+
+/* Mobile pulse */
+
+
+
+@keyframes russell-mobile-bubble-beat {
+
+
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.5;
+
+    }
+
+
+
+    50% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.15);
+
+
+
+        opacity: 0.5;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL — IPHONE CONTENT LAYOUT
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   PAGE MARGINS
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .project-content {
+
+
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   PROJECT GRID
+
+   COLLAPSE DESKTOP 12-COLUMN SYSTEM
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .project-grid {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    column-gap: 0;
+
+    row-gap: 14px;
+
+
+
+    width: 100%;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   FORCE PROJECT MEDIA TO FULL MOBILE WIDTH
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .span-12,
+
+.project-russell-page .span-10,
+
+.project-russell-page .span-8,
+
+.project-russell-page .span-6,
+
+.project-russell-page .span-4,
+
+.project-russell-page .span-3,
+
+
+
+.project-russell-page .span-10-centered,
+
+.project-russell-page .span-8-centered,
+
+.project-russell-page .span-8-centered_2,
+
+.project-russell-page .span-6-centered,
+
+.project-russell-page .span-4-centered,
+
+
+
+.project-russell-page .slider-medium,
+
+.project-russell-page .roof-plan-media,
+
+.project-russell-page .project-media-centered {
+
+
+
+    grid-column: 1 / -1;
+
+
+
+    width: 100%;
+
+    max-width: none;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   INTERACTIVE COVER
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .russell-interactive-cover {
+
+
+
+    grid-column: 1 / -1;
+
+
+
+    width: 100%;
+
+
+
+    margin-top: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   BEFORE / AFTER SLIDERS
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .slider-medium {
+
+
+
+    margin-top: 16px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   ROOF PLAN
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .roof-plan-media {
+
+
+
+    margin-top: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+
+   STANDARD CENTERED DRAWINGS
+
+--------------------------------------------------------- */
+
+
+
+.project-russell-page .span-8-centered {
+
+
+
+    margin-top: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+
+
+.project-russell-page .span-8-centered_2 {
+
+
+
+    margin-top: 14px;
+
+    margin-bottom: 14px;
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL — MOBILE ROOF PLAN SPACING ONLY
+
+========================================================= */
+
+
+
+.project-russell-page .roof-plan-media {
+
+    margin-top: -55px;
+
+    margin-bottom: 24px;
+
+}
+
+
+
+    /* =====================================================
+
+       MOBILE VARIABLES
+
+    ===================================================== */
+
+
+
+    :root {
+
+        --mobile-page-margin: 32px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       PREVENT HORIZONTAL OVERFLOW
+
+    ===================================================== */
+
+
+
+    html,
+
+    body {
+
+        overflow-x: hidden;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       TABLE OF CONTENTS
+
+       DESKTOP OFF / MOBILE ON
+
+    ===================================================== */
+
+
+
+    .toc-section {
+
+        display: none !important;
+
+    }
+
+
+
+    .toc-mobile-section {
+
+        display: block !important;
+
+
+
+        width: 100%;
+
+
+
+        padding:
+
+            14px
+
+            var(--mobile-page-margin)
+
+            110px;
+
+
+
+        box-sizing: border-box;
+
+    }
+
+
+
+    .toc-mobile-stage {
+
+        display: block !important;
+
+
+
+        position: relative;
+
+
+
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+
+
+    .toc-mobile-base {
+
+        display: block;
+
+
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       MOBILE TOC HITBOXES
+
+       2 COLUMNS × 6 ROWS
+
+    ===================================================== */
+
+
+
+    .toc-mobile-hitbox {
+
+        position: absolute;
+
+
+
+        width: 50%;
+
+        height: 16.666667%;
+
+
+
+        display: block;
+
+
+
+        z-index: 3;
+
+    }
+
+
+
+    /* =========================================================
+
+   RUSSELL — MOBILE COVER BUBBLES
+
+   LIVELY DOUBLE BEAT
+
+========================================================= */
+
+
+
+.project-russell-page .cover-bubble {
+
+
+
+    width: 12px;
+
+    height: 12px;
+
+
+
+    border: none;
+
+    border-radius: 50%;
+
+
+
+    box-shadow: none;
+
+
+
+    animation:
+
+        russell-mobile-bubble-beat
+
+        1.35s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+
+
+
+/* Remove desktop hover response */
+
+
+
+.project-russell-page .cover-bubble:hover {
+
+
+
+    animation-play-state: running;
+
+
+
+    transform:
+
+        translate(-50%, -50%)
+
+        scale(1);
+
+}
+
+
+
+
+
+/* Double beat */
+
+
+
+@keyframes russell-mobile-bubble-beat {
+
+
+
+    0%,
+
+    100% {
+
+
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.55;
+
+    }
+
+
+
+
+
+    18% {
+
+
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.45);
+
+
+
+        opacity: 0.9;
+
+    }
+
+
+
+
+
+    32% {
+
+
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.05);
+
+
+
+        opacity: 0.6;
+
+    }
+
+
+
+
+
+    45% {
+
+
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.28);
+
+
+
+        opacity: 0.8;
+
+    }
+
+
+
+
+
+    62% {
+
+
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.55;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL — MOBILE BEFORE / AFTER LABELS
+
+   FIRST SLIDER ONLY
+
+========================================================= */
+
+
+
+.project-russell-page
+
+.russell-slider-labeled
+
+.comparison-label {
+
+
+
+    top: 10px;
+
+
+
+    width: auto;
+
+    max-width: 105px;
+
+
+
+    padding: 5px 7px;
+
+
+
+    border-radius: 5px;
+
+
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+
+
+    line-height: 1.1;
+
+}
+
+
+
+
+
+/* LEFT LABEL */
+
+
+
+.project-russell-page
+
+.russell-slider-labeled
+
+.comparison-label-left {
+
+
+
+    left: 10px;
+
+}
+
+
+
+
+
+/* RIGHT LABEL */
+
+
+
+.project-russell-page
+
+.russell-slider-labeled
+
+.comparison-label-right {
+
+
+
+    right: 10px;
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL — IPHONE SLIDER / VIDEO PAIRS
+
+   HIDE VIDEOS
+
+   MAKE FLOOR-PLAN / RENDER SLIDERS FULL WIDTH
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.project-russell-page .project-media-pair {
+
+
+
+    width: 100%;
+
+
+
+    margin-top: 18px;
+
+    margin-left: 0;
+
+    margin-right: 0;
+
+    margin-bottom: 18px;
+
+
+
+    display: block;
+
+}
+
+
+
+
+
+/* Hide videos entirely on iPhone */
+
+
+
+.project-russell-page .project-video-wrapper {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* Slider becomes the only visible element */
+
+
+
+.project-russell-page .project-slider {
+
+
+
+    display: block;
+
+
+
+    width: 100%;
+
+    max-width: none;
+
+
+
+    aspect-ratio: 16 / 9;
+
+
+
+    margin: 0;
+
+}
+
+
+
+
+
+/* Keep images filling the slider */
+
+
+
+.project-russell-page .project-slider .slider-image {
+
+
+
+    width: 100%;
+
+    height: 100%;
+
+
+
+    object-fit: cover;
+
+}
+
+
+
+
+
+/* Slightly more compact arrow placement */
+
+
+
+.project-russell-page .slider-button.left {
+
+    left: 12px;
+
+}
+
+
+
+.project-russell-page .slider-button.right {
+
+    right: 12px;
+
+}
+
+
+
+
+
+/* Optional: slightly smaller arrows for iPhone */
+
+
+
+.project-russell-page .slider-button {
+
+    font-size: 28px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   IPHONE ONLY
+
+   PROJECT PAGE BOTTOM NAVIGATION
+
+
+
+   BACK TO INDEX | PROJECT BRIEF | CONTACT
+
+
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+@media (max-width: 600px) {
+
+
+
+
+
+    /* =====================================================
+
+       HIDE DESKTOP-ONLY PROJECT NAV ITEMS
+
+    ===================================================== */
+
+
+
+    .project-page .project-bottom-nav .projects-toggle {
+
+        display: none !important;
+
+    }
+
+
+
+    .project-page .bottom-nav-resume {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       CENTER NAVIGATION CONTAINER
+
+    ===================================================== */
+
+
+
+    .project-page .project-bottom-nav {
+
+
+
+        position: fixed;
+
+
+
+        left: var(--mobile-page-margin);
+
+        right: var(--mobile-page-margin);
+
+
+
+        width: auto;
+
+
+
+        transform: none;
+
+
+
+        bottom:
+
+            calc(
+
+                10px +
+
+                env(safe-area-inset-bottom)
+
+            );
+
+
+
+        display: grid;
+
+
+
+        grid-template-columns:
+
+            1fr
+
+            1fr
+
+            1fr;
+
+
+
+        align-items: center;
+
+
+
+        z-index: 1000;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       PROJECT BRIEF — CENTER
+
+    ===================================================== */
+
+
+
+    .project-page .project-bottom-nav .brief-toggle {
+
+
+
+        grid-column: 2;
+
+
+
+        justify-self: center;
+
+
+
+        white-space: nowrap;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       CONTACT — RIGHT
+
+    ===================================================== */
+
+
+
+    .project-page .project-bottom-nav .contact-trigger {
+
+
+
+        grid-column: 3;
+
+
+
+        justify-self: end;
+
+
+
+        white-space: nowrap;
+
+    }
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   BASE LAYOUT
+========================================================= */
+
+.project-stadium-page .project-content {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 60px;
+}
+
+
+/* Collapse desktop 12-column grid */
+
+.project-stadium-page .project-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 18px;
+
+    width: 100%;
+}
+
+
+/* Remove desktop column placement */
+
+.project-stadium-page .stadia-primary-slot,
+.project-stadium-page .stadia-two-grid,
+.project-stadium-page .stadia-wide-slot,
+.project-stadium-page .stadia-development-grid,
+.project-stadium-page .stadia-final-slot {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: none;
+}
+
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   PRIMARY COVER
+========================================================= */
+
+.project-stadium-page .stadia-primary-slot {
+    width: calc(100vw - 20px) !important;
+    max-width: none !important;
+
+    margin-left: calc(50% - 50vw + 10px) !important;
+    margin-right: 0 !important;
+
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    aspect-ratio: 14 / 8;
+}
+
+
+/* ACTUAL COVER IMAGE */
+
+.project-stadium-page .stadia-primary-slot > img {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+
+    object-fit: cover;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   VERTICAL STUDY SEQUENCE
+
+   SLIDER
+   VIDEO
+   SLIDER
+   VIDEO
+========================================================= */
+
+.project-stadium-page .stadia-two-grid,
+.project-stadium-page .stadia-two-grid-reversed {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: none;
+
+    gap: 24px;
+
+    margin-top: 24px;
+}
+
+
+/* =========================================================
+   FIRST STUDY
+
+   SLIDER → BOWL VIDEO
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid:not(.stadia-two-grid-reversed)
+.stadia-media-slot {
+    width: 100%;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   BOWL VIDEO — MOVE UP
+========================================================= */
+
+.project-stadium-page .stadia-bowl-video-slot {
+    position: relative;
+    transform: translateY(-250px);
+}
+
+/* =========================================================
+   SECOND STUDY
+
+   HTML IS:
+   VIDEO → SLIDER
+
+   MOBILE BECOMES:
+   SLIDER → VIDEO
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid-reversed
+.stadia-slider-slot {
+    order: 1;
+}
+
+.project-stadium-page
+.stadia-two-grid-reversed
+.stadia-video-slot {
+    order: 2;
+}
+
+
+/* =========================================================
+   CONCEPT SLIDERS
+========================================================= */
+
+.project-stadium-page .stadia-concept-slider {
+    width: 100%;
+}
+
+.project-stadium-page .stadia-concept-track {
+    width: 100%;
+}
+
+.project-stadium-page .stadia-concept-slide {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   SECOND CONCEPT GROUP — MOVE UP
+========================================================= */
+
+.project-stadium-page .stadia-two-grid-reversed {
+    position: relative;
+    transform: translateY(-520px);
+}
+
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   RAKING VIDEO — MOVE UP
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid-reversed
+.stadia-video-slot {
+    position: relative;
+    transform: translateY(-80px);
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   VISIBILITY COMPARISON — MOVE UP
+========================================================= */
+
+.project-stadium-page .stadia-wide-slot {
+    position: relative !important;
+
+    transform: translateY(-480px) !important;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   DEVELOPMENT MODEL LAYOUT
+   POSITION ONLY
+========================================================= */
+
+.project-stadium-page .stadia-development-grid {
+    margin-top: -530px;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   DATA BUBBLES
+========================================================= */
+
+.project-stadium-page .stadia-data-bubble {
+    width: 12px;
+    height: 12px;
+
+    border-width: 1.5px;
+}
+
+.project-stadium-page .stadia-data-bubble-inner {
+    width: 6px;
+    height: 6px;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   VISIBILITY COMPARISON OVERLAY
+========================================================= */
+
+.project-stadium-page .stadia-data-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+
+/* =========================================================
+   OVERLAY — OPEN STATE
+========================================================= */
+
+.project-stadium-page .stadia-data-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   OVERLAY IMAGE
+========================================================= */
+
+.project-stadium-page .stadia-data-overlay-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+    max-height: 80dvh;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   OVERLAY CLOSE BUTTON
+========================================================= */
+
+.project-stadium-page .stadia-data-overlay-close {
+    top: 20px;
+    right: 20px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 22px;
+
+    z-index: 100000;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   COVER TAP OVERLAY
+========================================================= */
+
+.project-stadium-page .stadia-primary-hover {
+    padding: 22px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.project-stadium-page
+.stadia-primary-slot:active
+.stadia-primary-hover,
+.project-stadium-page
+.stadia-primary-slot:focus-within
+.stadia-primary-hover {
+    opacity: 1;
+}
+
+.project-stadium-page .stadia-primary-hover p {
+    max-width: 100%;
+
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* =========================================================
+   STADIA — IPHONE PORTRAIT
+   FINAL DRAWING POSITION
+========================================================= */
+
+.project-stadium-page .stadia-final-slot {
+    margin-top: -300px;
+}
+
+/* =========================================================
+
+   SUE MANGO — IPHONE LIGHTBOX
+
+   HIDE THUMBNAILS
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.project-sue-page .sue-lightbox-thumbnails {
+
+    display: none !important;
+
+}
+
+
+
+
+    /* =====================================================
+
+       BACK TO INDEX — LEFT
+
+    ===================================================== */
+
+
+
+    .project-page .bottom-nav-back {
+
+
+
+        position: fixed;
+
+
+
+        left: var(--mobile-page-margin);
+
+        right: auto;
+
+
+
+        bottom:
+
+            calc(
+
+                10px +
+
+                env(safe-area-inset-bottom)
+
+            );
+
+
+
+        font-size: 14px;
+
+
+
+        white-space: nowrap;
+
+
+
+        z-index: 1001;
+
+    }
+
+
+
+}
+
+/* =========================================================
+
+   SUE MANGO — IPHONE LIGHTBOX ARROWS
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.project-sue-page .sue-lightbox-arrow {
+
+
+
+    color: #111111;
+
+
+
+    width: 52px;
+
+    height: 52px;
+
+
+
+    font-size: 36px;
+
+
+
+    top: 46%;
+
+}
+
+
+
+.project-sue-page .sue-lightbox-arrow {
+
+    color: #111111;
+
+
+
+    width: 52px;
+
+    height: 52px;
+
+
+
+    font-size: 36px;
+
+
+
+    top: 46%;
+
+
+
+    z-index: 10000;
+
+}
+
+
+
+/* =========================================================
+
+   NOMAS — IPHONE LAYOUT
+
+   FULLER WIDTH + TIGHTER VERTICAL SPACING
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.project-mentorship-page .project-content {
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* Collapse desktop 12-column structure */
+
+
+
+.project-mentorship-page .project-grid {
+
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 12px;
+
+
+
+    width: 100%;
+
+}
+
+
+
+
+
+/* Remove desktop 8-column constraint */
+
+
+
+.project-mentorship-page .span-8-centered,
+
+.project-mentorship-page .mentorship-three-image-grid {
+
+    grid-column: 1 / -1;
+
+
+
+    width: 100%;
+
+    max-width: none;
+
+
+
+    margin-left: 0;
+
+    margin-right: 0;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE LAYOUT
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   PURPOSE / INTRO
+
+========================================================= */
+
+
+
+.project-personal-page .personal-purpose-section {
+
+    width: calc(100% - 36px);
+
+    max-width: none;
+
+
+
+    margin: 24px auto 32px;
+
+
+
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 18px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MAIN AXONOMETRIC
+
+========================================================= */
+
+
+
+.project-personal-page .personal-work-stage {
+
+    grid-template-columns: 1fr;
+
+
+
+    column-gap: 0;
+
+
+
+    padding:
+
+        12px
+
+        18px
+
+        32px;
+
+}
+
+
+
+
+
+.project-personal-page .personal-axon {
+
+    grid-column: 1 / -1;
+
+
+
+    width: 100%;
+
+    max-width: none;
+
+
+
+    margin: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   PHOTOSHOP SECTION
+
+========================================================= */
+
+
+
+.project-personal-page .personal-photoshop-section {
+
+    width: calc(100% - 36px);
+
+    max-width: none;
+
+
+
+    margin: 32px auto;
+
+
+
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 18px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FULL MATERIAL ACCESS
+
+========================================================= */
+
+
+
+.project-personal-page .personal-material-section {
+
+    width: calc(100% - 36px);
+
+
+
+    margin:
+
+        32px
+
+        auto
+
+        60px;
+
+}
+
+
+
+
+
+/* Make the final drawing larger on iPhone */
+
+
+
+.project-personal-page .personal-material-image {
+
+    width: 72%;
+
+    max-width: none;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   COVER
+
+========================================================= */
+
+
+
+.project-mentorship-page .mentorship-cover {
+
+    width: 100%;
+
+
+
+    aspect-ratio: auto;
+
+
+
+    margin-top: 18px;
+
+    margin-bottom: 16px;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE BOTTOM NAV
+
+   EQUAL SIZE / EVENLY DISTRIBUTED / CENTERED
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+/* Hide desktop-only items */
+
+
+
+.project-personal-page .project-bottom-nav .projects-toggle {
+
+    display: none !important;
+
+}
+
+
+
+.project-personal-page .bottom-nav-resume {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* Shared label sizing */
+
+
+
+.project-personal-page .bottom-nav-back,
+
+.project-personal-page .project-bottom-nav .course-overview-toggle,
+
+.project-personal-page .project-bottom-nav .contact-trigger {
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+}
+
+
+
+
+
+/* Center navigation container:
+
+   middle + right thirds
+
+*/
+
+
+
+.project-personal-page .project-bottom-nav {
+
+    position: fixed;
+
+
+
+    left: 18px;
+
+    right: 18px;
+
+
+
+    width: auto;
+
+
+
+    bottom:
+
+        calc(
+
+            10px +
+
+            env(safe-area-inset-bottom)
+
+        );
+
+
+
+    transform: none;
+
+
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+
+    align-items: center;
+
+
+
+    z-index: 1000;
+
+}
+
+
+
+
+
+/* Back to Contents:
+
+   occupies the left third visually
+
+*/
+
+
+
+.project-personal-page .bottom-nav-back {
+
+    position: fixed;
+
+
+
+    left: 18px;
+
+
+
+    width: calc((100vw - 36px) / 3);
+
+
+
+    bottom:
+
+        calc(
+
+            10px +
+
+            env(safe-area-inset-bottom)
+
+        );
+
+
+
+    z-index: 1001;
+
+}
+
+
+
+
+
+/* Course Overview:
+
+   centered in middle third
+
+*/
+
+
+
+.project-personal-page .project-bottom-nav .course-overview-toggle {
+
+    grid-column: 2;
+
+
+
+    width: 100%;
+
+
+
+    justify-self: center;
+
+}
+
+
+
+
+
+/* Contact:
+
+   centered in right third
+
+*/
+
+
+
+.project-personal-page .project-bottom-nav .contact-trigger {
+
+    grid-column: 3;
+
+
+
+    width: 100%;
+
+
+
+    justify-self: center;
+
+}
+
+
+
+/* Default: desktop/mobile label handling */
+
+
+
+.project-personal-page .personal-back-mobile {
+
+    display: none;
+
+}
+
+
+
+.project-personal-page .personal-back-desktop {
+
+    display: none;
+
+}
+
+
+
+.project-personal-page .personal-back-mobile {
+
+    display: inline;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RESUME — IPHONE LAYOUT
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.resume-page .resume-content {
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* Collapse résumé grid */
+
+
+
+.resume-page .resume-grid {
+
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LEFT COLUMN
+
+========================================================= */
+
+
+
+.resume-page .resume-left-column {
+
+    grid-column: 1 / -1;
+
+    grid-row: 1;
+
+
+
+    width: 100%;
+
+
+
+    margin-top: 18px;
+
+    margin-left: 0;
+
+
+
+    align-items: center;
+
+}
+
+
+
+
+
+/* Headshot */
+
+
+
+.resume-page .resume-headshot {
+
+    width: 68%;
+
+    max-width: none;
+
+}
+
+
+
+
+
+/* Contact / portfolio / social links */
+
+
+
+.resume-page .resume-headshot-links {
+
+    width: 68%;
+
+
+
+    margin-top: 10px;
+
+
+
+    align-items: flex-start;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RÉSUMÉ INFORMATION
+
+========================================================= */
+
+
+
+.resume-page .resume-information {
+
+    grid-column: 1 / -1;
+
+    grid-row: 2;
+
+
+
+    width: 100%;
+
+
+
+    margin-top: 28px;
+
+
+
+    gap: 24px;
+
+}
+
+
+
+
+
+/* Let text use the available phone width */
+
+
+
+.resume-page .resume-info-content {
+
+    max-width: none;
+
+    width: 100%;
+
+}
+
+
+
+
+
+/* Slightly tighter entries */
+
+
+
+.resume-page .resume-info-entry {
+
+    margin-bottom: 7px;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — MOBILE TEXT REDUCTION
+
+   KEEP HEADERS, REMOVE CAPTIONS
+
+========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy p,
+
+.project-personal-page .personal-photoshop-copy p {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — HIDE AXON LABEL ON IPHONE
+
+========================================================= */
+
+
+
+.project-personal-page .axon-label-revit {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   THREE IMAGE COMPOSITION
+
+========================================================= */
+
+
+
+.project-mentorship-page .mentorship-three-image-grid {
+
+    grid-template-columns: 1fr;
+
+
+
+    height: auto;
+
+
+
+    gap: 12px;
+
+
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.project-personal-page
+
+.project-bottom-nav
+
+.course-overview-toggle {
+
+    grid-column: 2;
+
+
+
+    justify-self: center;
+
+
+
+    white-space: nowrap;
+
+}
+
+
+
+.project-mentorship-page .mentorship-three-left {
+
+    gap: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   CONTACT CARD — IPHONE
+
+   SHARED ACROSS PORTFOLIO
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.contact-overlay {
+
+    padding: 18px;
+
+
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CARD
+
+========================================================= */
+
+
+
+.contact-card {
+
+    width: 100%;
+
+    max-width: 360px;
+
+
+
+    height: auto;
+
+
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+
+
+    row-gap: 18px;
+
+
+
+    padding:
+
+        44px
+
+        22px
+
+        24px;
+
+
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VISUAL
+
+========================================================= */
+
+
+
+.contact-visual {
+
+    width: 130px;
+
+    height: 130px;
+
+
+
+    justify-self: center;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DIVIDER
+
+   VERTICAL → HORIZONTAL
+
+========================================================= */
+
+
+
+.contact-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+
+
+    justify-self: center;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CONTACT INFORMATION
+
+========================================================= */
+
+
+
+.contact-info {
+
+    width: 100%;
+
+
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    text-align: center;
+
+}
+
+
+
+
+
+.contact-info h2 {
+
+    margin: 0 0 14px;
+
+
+
+    font-size: 24px;
+
+}
+
+
+
+
+
+.contact-info p {
+
+    margin: 0 0 18px;
+
+
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+
+
+
+/* Prevent email from escaping narrow screens */
+
+
+
+.contact-info p a {
+
+    overflow-wrap: anywhere;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SOCIAL LINKS
+
+========================================================= */
+
+
+
+.contact-links {
+
+    flex-direction: row;
+
+
+
+    justify-content: center;
+
+
+
+    gap: 20px;
+
+}
+
+
+
+
+
+.contact-links a {
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CLOSE BUTTON
+
+========================================================= */
+
+
+
+.contact-close {
+
+    top: 14px;
+
+    right: 16px;
+
+
+
+    font-size: 30px;
+
+}
+
+
+
+.resume-page ~ .bottom-nav .resume-mobile-contents {
+
+    display: inline !important;
+
+}
+
+
+
+/* RESUME — MOBILE BOTTOM NAV */
+
+
+
+.resume-page ~ .bottom-nav .projects-toggle {
+
+    display: none !important;
+
+}
+
+
+
+.resume-page ~ .bottom-nav .resume-mobile-contents {
+
+    display: inline;
+
+}
+
+
+
+/* =========================================================
+
+   INDEX — IPHONE PROJECTS BUTTON
+
+   DISABLED + VISUALLY INACTIVE
+
+   DESKTOP PROTECTED
+
+========================================================= */
+
+
+
+.home-page .projects-toggle {
+
+    pointer-events: none;
+
+    cursor: default;
+
+
+
+    color: #b8b8b8;
+
+}
+
+
+
+
+
+    /* 01 — CENOTE
+
+       ROW 1 / RIGHT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-cenote {
+
+        left: 50%;
+
+        top: 0%;
+
+    }
+
+
+
+
+
+    /* 02 — RUSSELL
+
+       ROW 2 / LEFT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-russell {
+
+        left: 0%;
+
+        top: 16.666667%;
+
+    }
+
+
+
+
+
+    /* 03 — STADIA
+
+       ROW 3 / RIGHT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-stadium {
+
+        left: 50%;
+
+        top: 33.333333%;
+
+    }
+
+
+
+
+
+    /* 04 — SUE MANGO
+
+       ROW 4 / LEFT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-sue {
+
+        left: 0%;
+
+        top: 50%;
+
+    }
+
+
+
+
+
+    /* 05 — NOMAS
+
+       ROW 5 / RIGHT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-nomas {
+
+        left: 50%;
+
+        top: 66.666667%;
+
+    }
+
+
+
+
+
+    /* 06 — PERSONAL WORK
+
+       ROW 6 / LEFT
+
+    ----------------------------------------------------- */
+
+
+
+    .toc-mobile-hitbox-personal {
+
+        left: 0%;
+
+        top: 83.333333%;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       MOBILE RESUME LABEL
+
+    ===================================================== */
+
+
+
+    .resume-label-desktop {
+
+        display: none;
+
+    }
+
+
+
+    .resume-label-mobile {
+
+        display: inline;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       BOTTOM NAVIGATION
+
+    ===================================================== */
+
+
+
+    .bottom-nav {
+
+        left: var(--mobile-page-margin);
+
+        right: var(--mobile-page-margin);
+
+
+
+        width: auto;
+
+
+
+        transform: none;
+
+
+
+        bottom:
+
+            calc(
+
+                10px +
+
+                env(safe-area-inset-bottom)
+
+            );
+
+
+
+        justify-content: space-between;
+
+
+
+        gap: 16px;
+
+    }
+
+
+
+
+
+    .bottom-nav a,
+
+    .projects-toggle,
+
+    .contact-trigger {
+
+        font-size: 14px;
+
+
+
+        white-space: nowrap;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       PROJECTS PANEL
+
+    ===================================================== */
+
+
+
+    .projects-panel {
+
+        padding-left: var(--mobile-page-margin);
+
+        padding-right: var(--mobile-page-margin);
+
+
+
+        bottom:
+
+            calc(
+
+                50px +
+
+                env(safe-area-inset-bottom)
+
+            );
+
+    }
+
+
+
+
+
+
+
+
+    .project-cenote-page .cri-bubble {
+
+
+
+        width: 6px;
+
+        height: 6px;
+
+
+
+        padding: 0;
+
+
+
+        border: none;
+
+        border-radius: 50%;
+
+
+
+        background: #111111;
+
+
+
+        animation:
+
+            cri-mobile-bubble-beat
+
+            1.6s
+
+            ease-in-out
+
+            infinite;
+
+    }
+
+
+
+
+
+    .project-cenote-page .cri-bubble-inner {
+
+        display: none;
+
+    }
+
+
+
+
+
+    @keyframes cri-mobile-bubble-beat {
+
+
+
+        0%,
+
+        100% {
+
+            transform:
+
+                translate(-50%, -50%)
+
+                scale(1);
+
+
+
+            opacity: 0.45;
+
+        }
+
+
+
+        50% {
+
+            transform:
+
+                translate(-50%, -50%)
+
+                scale(1.15);
+
+
+
+            opacity: 0.45;
+
+        }
+
+    }
+}
+
+
+/* =========================================================
+   IPHONE — PORTRAIT
+========================================================= */
+
+@media
+    (max-width: 600px)
+    and (orientation: portrait) {
+/* =========================================================
+       PREVENT HORIZONTAL PAGE SLIDING
+    ========================================================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — TOC VISIBILITY
+
+    ===================================================== */
+
+
+
+    .home-page .toc-section {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    .home-page .toc-mobile-section {
+
+        display: block !important;
+
+    }
+
+
+
+
+
+    .home-page .toc-landscape-section {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       CENOTE — SITE PLAN LABEL POINTS
+
+       HIDDEN ON IPHONE PORTRAIT ONLY
+
+    ===================================================== */
+
+
+
+    .project-cenote-page .banana-point {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       CENOTE — TOH / BIO-SANCTUARY
+
+       CENTERED TWO-COLUMN GRID
+
+    ===================================================== */
+
+
+
+    .project-cenote-page .two-image-grid-portrait {
+
+        display: grid;
+
+
+
+        grid-template-columns:
+
+            repeat(2, minmax(0, 1fr));
+
+
+
+        column-gap: 22px;
+
+
+
+        width: 84%;
+
+        max-width: 360px;
+
+
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+
+
+        margin-top: 30px;
+
+        margin-bottom: 30px;
+
+
+
+        align-items: center;
+
+    }
+
+
+
+
+
+    .project-cenote-page
+
+    .two-image-grid-portrait figure {
+
+        width: 100%;
+
+
+
+        margin: 0;
+
+
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+
+
+
+
+    .project-cenote-page
+
+    .two-image-grid-portrait img {
+
+        display: block;
+
+
+
+        width: 100%;
+
+        height: auto;
+
+
+
+        margin: 0 auto;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       PROJECT PAGE — PORTRAIT BOTTOM NAV
+
+
+
+       BACK TO INDEX | PROJECT BRIEF | CONTACT
+
+    ===================================================== */
+
+
+
+    .project-page
+
+    .project-bottom-nav
+
+    .projects-toggle {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    .project-page .bottom-nav-resume {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    .project-page .project-bottom-nav {
+
+        left: var(--mobile-page-margin);
+
+        right: var(--mobile-page-margin);
+
+
+
+        width: auto;
+
+
+
+        transform: none;
+
+
+
+        grid-template-columns:
+
+            1fr
+
+            1fr
+
+            1fr;
+
+    }
+
+
+
+
+
+    .project-page
+
+    .project-bottom-nav
+
+    .brief-toggle {
+
+        grid-column: 2;
+
+
+
+        justify-self: center;
+
+
+
+        white-space: nowrap;
+
+    }
+
+
+
+
+
+    .project-page
+
+    .project-bottom-nav
+
+    .contact-trigger {
+
+        grid-column: 3;
+
+
+
+        justify-self: end;
+
+
+
+        white-space: nowrap;
+
+    }
+
+
+
+
+
+    .project-page .bottom-nav-back {
+
+        position: fixed;
+
+
+
+        left: var(--mobile-page-margin);
+
+        right: auto;
+
+
+
+        bottom:
+
+            calc(
+
+                10px +
+
+                env(safe-area-inset-bottom)
+
+            );
+
+
+
+        font-size: 14px;
+
+
+
+        white-space: nowrap;
+
+
+
+        z-index: 1001;
+
+    }
+}
+
+
+/* =========================================================
+   IPHONE — LANDSCAPE
+========================================================= */
+
+@media
+    (orientation: landscape)
+    and (max-height: 500px)
+    and (hover: none)
+    and (pointer: coarse) {
+
+    .toc-mobile-section,
+    .toc-mobile-stage,
+    .toc-landscape-section,
+    .resume-label-mobile,
+    .project-personal-page .personal-back-mobile {
+        display: none;
+    }
+
+    .resume-page ~ .bottom-nav .resume-mobile-contents {
+        display: none !important;
+    }
+
+/* =========================================================
+       PREVENT HORIZONTAL PAGE SLIDING
+    ========================================================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — TOC VISIBILITY
+
+
+
+       DESKTOP OFF
+
+       PORTRAIT MOBILE OFF
+
+       LANDSCAPE MOBILE ON
+
+    ===================================================== */
+
+
+
+    .home-page .toc-section {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    .home-page .toc-mobile-section {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    .home-page .toc-landscape-section {
+
+        display: flex !important;
+
+
+
+        width: 100%;
+
+
+
+        justify-content: center;
+
+
+
+        padding:
+
+            0
+
+            18px
+
+            52px;
+
+
+
+        box-sizing: border-box;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       LANDSCAPE TOC STAGE
+
+    ===================================================== */
+
+
+
+    .home-page .toc-landscape-stage {
+
+        position: relative;
+
+
+
+        width:
+
+            min(
+
+                calc(100vw - 36px),
+
+                calc(
+
+                    (100dvh - 115px)
+
+                    *
+
+                    (4504 / 2475)
+
+                )
+
+            );
+
+
+
+        aspect-ratio:
+
+            4504 / 2475;
+
+
+
+        overflow: hidden;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       LANDSCAPE BASE IMAGE
+
+    ===================================================== */
+
+
+
+    .home-page .toc-landscape-base {
+
+        display: block;
+
+
+
+        width: 100%;
+
+        height: 100%;
+
+
+
+        object-fit: contain;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       LANDSCAPE TAP ZONES
+
+    ===================================================== */
+
+
+
+    .home-page .toc-landscape-hitbox {
+
+        position: absolute;
+
+
+
+        width: 25%;
+
+        height: 33.333333%;
+
+
+
+        z-index: 2;
+
+    }
+
+
+
+
+
+
+
+    /* 01 — CENOTE
+
+       ROW 1 / COLUMN 2 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-cenote {
+
+        left: 25%;
+
+        top: 0;
+
+    }
+
+
+
+
+
+
+
+    /* 02 — RUSSELL
+
+       ROW 1 / COLUMN 4 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-russell {
+
+        left: 75%;
+
+        top: 0;
+
+    }
+
+
+
+
+
+
+
+    /* 03 — STADIA
+
+       ROW 2 / COLUMN 1 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-stadium {
+
+        left: 0;
+
+        top: 33.333333%;
+
+    }
+
+
+
+
+
+
+
+    /* 04 — SUE MANGO
+
+       ROW 2 / COLUMN 3 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-sue {
+
+        left: 50%;
+
+        top: 33.333333%;
+
+    }
+
+
+
+
+
+
+
+    /* 05 — NOMAS
+
+       ROW 3 / COLUMN 2 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-nomas {
+
+        left: 25%;
+
+        top: 66.666666%;
+
+    }
+
+
+
+
+
+
+
+    /* 06 — PERSONAL WORK
+
+       ROW 3 / COLUMN 4 */
+
+
+
+    .home-page
+
+    .toc-landscape-hitbox-personal {
+
+        left: 75%;
+
+        top: 66.666666%;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — HERO
+
+       REDUCE VERTICAL SPACE
+
+    ===================================================== */
+
+
+
+    .home-page .hero {
+
+        margin-bottom: 2px;
+
+    }
+
+
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — PROJECTS BUTTON
+
+       INACTIVE ON IPHONE LANDSCAPE
+
+    ===================================================== */
+
+
+
+    .home-page .projects-toggle {
+
+        pointer-events: none;
+
+
+
+        cursor: default;
+
+
+
+        color: #b8b8b8;
+
+    }
+
+
+
+
+
+
+/* =========================================================
+
+   CENOTE — IPHONE LANDSCAPE
+
+   HIDE BANANA BUBBLES
+
+   DESKTOP / PORTRAIT PROTECTED
+
+========================================================= */
+
+
+
+.project-cenote-page .banana-point {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   CENOTE — IPHONE LANDSCAPE
+
+   CRI BUBBLES
+
+   SAME VISUAL LANGUAGE AS PORTRAIT
+
+========================================================= */
+
+
+
+.project-cenote-page .cri-bubble {
+
+    width: 6px;
+
+    height: 6px;
+
+
+
+    padding: 0;
+
+
+
+    border: none;
+
+    border-radius: 50%;
+
+
+
+    background: #111111;
+
+
+
+    box-shadow: none;
+
+
+
+    animation:
+
+        cri-mobile-bubble-beat
+
+        1.6s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+
+
+
+.project-cenote-page .cri-bubble-inner {
+
+    display: none;
+
+}
+
+
+
+@keyframes cri-mobile-bubble-beat {
+
+
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.35;
+
+    }
+
+
+
+    50% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.15);
+
+
+
+        opacity: 0.35;
+
+    }
+
+
+
+}
+
+
+
+/* =========================================================
+
+   CENOTE — IPHONE LANDSCAPE
+
+   TOH / BIO-SANCTUARY
+
+   CENTER THE EXISTING TWO-COLUMN LAYOUT
+
+========================================================= */
+
+
+
+.project-cenote-page .two-image-grid-portrait {
+
+    width: 84%;
+
+    max-width: 520px;
+
+
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+
+
+    justify-self: center;
+
+}
+
+
+
+/* =========================================================
+
+   PROJECT PAGE — IPHONE LANDSCAPE
+
+   DISABLE PROJECTS BUTTON
+
+========================================================= */
+
+
+
+.project-page .project-bottom-nav .projects-toggle {
+
+    pointer-events: none;
+
+    cursor: default;
+
+
+
+    color: #b8b8b8;
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL LOFTS — IPHONE LANDSCAPE
+
+   CLEAN SINGLE-COLUMN EDITORIAL LAYOUT
+
+   DESKTOP / IPAD / PORTRAIT PROTECTED
+
+========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   MAIN CONTENT
+
+========================================================= */
+
+
+
+.project-russell-page .project-content {
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   COLLAPSE 12-COLUMN GRID
+
+
+
+   THIS ALSO REMOVES THE THREE-IMAGE ROW FORMAT.
+
+   THE THREE IMAGES REMAIN, BUT STACK INDIVIDUALLY.
+
+========================================================= */
+
+
+
+.project-russell-page .project-grid {
+
+    grid-template-columns: 1fr;
+
+
+
+    column-gap: 0;
+
+    row-gap: 16px;
+
+
+
+    width: 100%;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RUSSELL — IPHONE LANDSCAPE
+
+   SCALE MEDIA DOWN 5%
+
+========================================================= */
+
+
+
+.project-russell-page .russell-interactive-cover,
+
+.project-russell-page .span-12,
+
+.project-russell-page .span-10,
+
+.project-russell-page .span-8,
+
+.project-russell-page .span-6,
+
+.project-russell-page .span-4,
+
+.project-russell-page .span-3,
+
+.project-russell-page .span-10-centered,
+
+.project-russell-page .span-8-centered,
+
+.project-russell-page .span-8-centered_2,
+
+.project-russell-page .span-6-centered,
+
+.project-russell-page .span-4-centered,
+
+.project-russell-page .slider-medium,
+
+.project-russell-page .roof-plan-media,
+
+.project-russell-page .project-media-centered {
+
+
+
+    width: 95%;
+
+
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+
+/* =========================================================
+
+   INTERACTIVE COVER
+
+========================================================= */
+
+
+
+.project-russell-page .russell-interactive-cover {
+
+    grid-column: 1 / -1;
+
+
+
+    width: 100%;
+
+    max-width: none;
+
+
+
+    margin-top: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BUBBLES
+
+   SMALL / CLEAN / LIVELY
+
+========================================================= */
+
+
+
+.project-russell-page .cover-bubble {
+
+    width: 13px;
+
+    height: 13px;
+
+
+
+    padding: 0;
+
+
+
+    border: none;
+
+    border-radius: 50%;
+
+
+
+    box-shadow: none !important;
+
+
+
+    opacity: 0.72;
+
+
+
+    animation:
+
+        russell-landscape-bubble-beat
+
+        1.45s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+
+
+
+/* REMOVE DESKTOP HOVER BEHAVIOR */
+
+
+
+.project-russell-page .cover-bubble:hover {
+
+    animation-play-state: running;
+
+
+
+    box-shadow: none !important;
+
+}
+
+
+
+
+
+/* LIVELY DOUBLE BEAT */
+
+
+
+@keyframes russell-landscape-bubble-beat {
+
+
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.68;
+
+    }
+
+
+
+    18% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.32);
+
+
+
+        opacity: 0.95;
+
+    }
+
+
+
+    32% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.05);
+
+
+
+        opacity: 0.72;
+
+    }
+
+
+
+    46% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.20);
+
+
+
+        opacity: 0.88;
+
+    }
+
+
+
+    62% {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1);
+
+
+
+        opacity: 0.68;
+
+    }
+
+}
+
+
+
+
+/* =========================================================
+   BEFORE / AFTER SLIDERS
+========================================================= */
+
+.project-russell-page .slider-medium {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   ROOF PLAN
+   EQUAL SPACE ABOVE + BELOW
+========================================================= */
+
+.project-russell-page .roof-plan-media {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   RUSSELL — IPHONE LANDSCAPE
+   THREE-IMAGE ROW
+========================================================= */
+
+.project-russell-page .project-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+}
+
+.project-russell-page .russell-three-image {
+    grid-column: span 4 !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   STANDARD CENTERED MEDIA
+   CONSISTENT VERTICAL RHYTHM
+========================================================= */
+
+.project-russell-page .span-8-centered {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-russell-page .span-8-centered_2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   SLIDER + VIDEO PAIRS
+   REMOVE VIDEO
+   SLIDER BECOMES FULL WIDTH
+========================================================= */
+
+.project-russell-page .project-media-pair {
+    width: 95%;
+
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+
+    display: block;
+}
+
+.project-russell-page .project-video-wrapper {
+    display: none !important;
+}
+
+.project-russell-page .project-slider {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   SLIDER IMAGES
+========================================================= */
+
+.project-russell-page .project-slider .slider-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* =========================================================
+
+   SLIDER ARROWS
+
+   TOUCH-FRIENDLY BUT VISUALLY LIGHT
+
+========================================================= */
+
+
+
+.project-russell-page .slider-button {
+
+    font-size: 28px;
+
+}
+
+
+
+
+
+.project-russell-page .slider-button.left {
+
+    left: 12px;
+
+}
+
+
+
+
+
+.project-russell-page .slider-button.right {
+
+    right: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   SUE MANGO — IPHONE LANDSCAPE
+
+   HIDE LIGHTBOX THUMBNAILS
+
+========================================================= */
+
+
+
+.project-sue-page .sue-lightbox-thumbnails {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   SUE MANGO — IPHONE LANDSCAPE
+
+   CENTER FIVE-IMAGE GROUP
+
+========================================================= */
+
+
+
+.project-sue-page .five-image-grid {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+
+/* =========================================================
+
+   MENTORSHIP — IPHONE LANDSCAPE
+
+   TIGHTEN COVER → THREE IMAGE GROUP
+
+========================================================= */
+
+
+
+.project-mentorship-page .mentorship-cover {
+
+    margin-bottom: 0 !important;
+
+}
+
+
+
+.project-mentorship-page .mentorship-three-image-grid {
+
+    margin-top: 0 !important;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE LANDSCAPE
+
+   HIDE REVIT BEGINNER TUTORIALS LABEL
+
+========================================================= */
+
+
+
+.project-personal-page .axon-label-revit {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE LANDSCAPE
+
+   TITLES + IMAGES ONLY
+
+========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy p,
+
+.project-personal-page .personal-photoshop-copy p {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE LANDSCAPE
+
+   IMAGE / TEXT SPLIT
+
+   65% IMAGE / 35% TEXT
+
+========================================================= */
+
+
+
+.project-personal-page .personal-purpose-section,
+
+.project-personal-page .personal-photoshop-section {
+
+    grid-template-columns:
+
+        minmax(0, 65fr)
+
+        minmax(0, 35fr);
+
+
+
+    column-gap: 28px;
+
+
+
+    align-items: center;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPHONE LANDSCAPE
+
+   BOTTOM NAVIGATION
+
+   CONTENTS | COURSE OVERVIEW | CONTACT
+
+========================================================= */
+
+
+
+.project-personal-page
+
+.project-bottom-nav
+
+.projects-toggle {
+
+    display: none !important;
+
+}
+
+
+
+
+
+.project-personal-page
+
+.bottom-nav-resume {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* TEXT SWAP */
+
+
+
+.project-personal-page
+
+.personal-back-desktop {
+
+    display: none !important;
+
+}
+
+
+
+
+
+.project-personal-page
+
+.personal-back-mobile {
+
+    display: inline !important;
+
+}
+
+
+
+
+
+/* THREE EQUAL NAV POSITIONS */
+
+
+
+.project-personal-page
+
+.project-bottom-nav {
+
+    position: fixed;
+
+
+
+    left: 18px;
+
+    right: 18px;
+
+
+
+    width: auto;
+
+
+
+    bottom:
+
+        calc(
+
+            10px +
+
+            env(safe-area-inset-bottom)
+
+        );
+
+
+
+    transform: none;
+
+
+
+    display: grid;
+
+
+
+    grid-template-columns:
+
+        repeat(3, 1fr);
+
+
+
+    align-items: center;
+
+}
+
+
+
+
+
+/* LEFT — CONTENTS */
+
+
+
+.project-personal-page
+
+.bottom-nav-back {
+
+    position: fixed;
+
+
+
+    left: 18px;
+
+
+
+    width:
+
+        calc(
+
+            (100vw - 36px)
+
+            / 3
+
+        );
+
+
+
+    bottom:
+
+        calc(
+
+            10px +
+
+            env(safe-area-inset-bottom)
+
+        );
+
+
+
+    text-align: center;
+
+
+
+    font-size: 13px;
+
+
+
+    z-index: 1001;
+
+}
+
+
+
+
+
+/* CENTER — COURSE OVERVIEW */
+
+
+
+.project-personal-page
+
+.project-bottom-nav
+
+.course-overview-toggle {
+
+    grid-column: 2;
+
+
+
+    width: 100%;
+
+
+
+    justify-self: center;
+
+
+
+    text-align: center;
+
+
+
+    font-size: 13px;
+
+
+
+    white-space: nowrap;
+
+}
+
+
+
+
+
+/* RIGHT — CONTACT */
+
+
+
+.project-personal-page
+
+.project-bottom-nav
+
+.contact-trigger {
+
+    grid-column: 3;
+
+
+
+    width: 100%;
+
+
+
+    justify-self: center;
+
+
+
+    text-align: center;
+
+
+
+    font-size: 13px;
+
+
+
+    white-space: nowrap;
+
+}
+
+
+
+/* =========================================================
+
+   RESUME — IPHONE LANDSCAPE
+
+   HIDE PROJECTS BUTTON
+
+   KEEP CONTENTS
+
+========================================================= */
+
+
+
+.resume-page ~ .bottom-nav .projects-toggle {
+
+    display: none !important;
+
+}
+
+/* =========================================================
+   STADIA — IPHONE LANDSCAPE
+========================================================= */
+
+
+/* =========================================================
+   TWO-GRID
+========================================================= */
+
+.project-stadium-page .stadia-two-grid {
+    width: 92%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    column-gap: 28px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   TWO-GRID MEDIA
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid
+.stadia-media-slot,
+
+.project-stadium-page
+.stadia-two-grid
+.stadia-video-slot {
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   TWO-GRID IMAGES
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid
+img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+}
+
+
+/* =========================================================
+   STADIA — IPHONE LANDSCAPE
+   CONCEPT SLIDER ARROWS
+========================================================= */
+
+.project-stadium-page
+.stadia-concept-prev,
+
+.project-stadium-page
+.stadia-concept-next {
+    top: 64%;
+
+    transform: translateY(-50%);
+
+    z-index: 20;
+}
+
+
+/* PREVIOUS — LEFT */
+
+.project-stadium-page
+.stadia-concept-prev {
+    left: 5px;
+}
+
+
+/* NEXT — RIGHT */
+
+.project-stadium-page
+.stadia-concept-next {
+    right: 5px;
+}
+
+
+/* =========================================================
+   STADIA — IPHONE LANDSCAPE
+   TWO-GRID VIDEO POSITION
+========================================================= */
+
+
+/* =========================================================
+   BOWL OPENING VIDEO
+   RIGHT SIDE — FIRST TWO-GRID
+========================================================= */
+
+.project-stadium-page
+.stadia-bowl-video-crop {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    transform: translateY(20px);
+
+    overflow: hidden;
+}
+
+
+.project-stadium-page
+.stadia-bowl-video {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: 100%;
+
+    transform: none;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   RAKING VIDEO
+   LEFT SIDE — SECOND TWO-GRID
+========================================================= */
+
+.project-stadium-page
+.stadia-two-grid-reversed
+.stadia-video-stage {
+    width: 100%;
+
+    transform: translateY(25px);
+}
+
+
+.project-stadium-page
+.stadia-two-grid-reversed
+.stadia-loop-video {
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+}
+
+/* =========================================================
+   STADIA — IPHONE LANDSCAPE
+   DEVELOPMENT TWO-IMAGE GROUP
+   POSITION ONLY
+========================================================= */
+
+.project-stadium-page .stadia-development-grid {
+    margin-top: -100px;
+}
+
+/* =========================================================
+   STADIA — IPHONE LANDSCAPE
+   FINAL DRAWING
+   VERTICAL POSITION CONTROL
+========================================================= */
+
+.project-stadium-page .stadia-final-slot {
+    position: relative;
+
+    top: -60px;
+}
+
+/* =========================================================
+   END — IPHONE LANDSCAPE
+========================================================= */
+}

@@ -1,0 +1,575 @@
+/* =========================================================
+   NOMAS MENTORSHIP
+   PROJECT-SPECIFIC CSS
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.project-mentorship-page {
+    background:
+        #f5f5f2;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF ACCENT
+========================================================= */
+
+.project-mentorship-page
+.brief-content h2 {
+    color:
+        #934f9f;
+}
+
+
+.project-mentorship-page
+.brief-meta {
+    color:
+        #934f9f;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+.project-mentorship-page
+.project-content {
+    padding-bottom:
+        150px;
+}
+/* =========================================================
+   COVER
+========================================================= */
+
+.mentorship-cover {
+    position:
+        relative;
+
+    margin-top:
+        30px;
+
+    margin-bottom:
+        100px;
+
+    overflow:
+        hidden;
+}
+
+
+
+/* =========================================================
+   NOMAS SPREAD
+   FULL ARTBOARD — NO CROPPING / NO SIDE BARS
+========================================================= */
+
+.mentorship-cover {
+    position: relative;
+
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+    overflow: hidden;
+
+    /* IMPORTANT */
+    aspect-ratio: auto;
+}
+
+
+.mentorship-cover img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   THREE IMAGE COMPOSITION
+========================================================= */
+
+.mentorship-three-image-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(0, 0.72fr);
+
+    gap: 14px;
+
+    height: 560px;
+
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+
+
+/* =========================================================
+   LEFT SIDE
+   TWO HORIZONTAL IMAGES
+========================================================= */
+
+.mentorship-three-left {
+    display: grid;
+
+    grid-template-rows:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.mentorship-three-right {
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+
+
+/* =========================================================
+   FIGURES
+========================================================= */
+
+.mentorship-horizontal,
+.mentorship-vertical {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================================
+   HORIZONTAL IMAGES
+   KEEP THEM CROPPED INTO THEIR FRAMES
+========================================================= */
+
+.mentorship-horizontal img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+
+/* =========================================================
+   HORIZONTAL TOP
+========================================================= */
+
+.mentorship-three-left
+.mentorship-horizontal:nth-child(1)
+img {
+    object-position:
+        center center;
+}
+
+
+
+/* =========================================================
+   HORIZONTAL BOTTOM
+
+   Higher percentage = shifts the actual photograph upward
+   so more of the lower content becomes visible.
+========================================================= */
+
+.mentorship-three-left
+.mentorship-horizontal:nth-child(2)
+img {
+    object-position:
+        center 72%;
+}
+
+
+
+/* =========================================================
+   VERTICAL DRAWING
+
+   IMPORTANT:
+   This is treated as a complete artboard.
+   Nothing gets cropped.
+========================================================= */
+
+.mentorship-vertical {
+    background:
+        #ffffff;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+
+.mentorship-vertical img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit:
+        contain;
+
+    object-position:
+        center center;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+/* =========================================================
+   COVER CROP CONTROL
+========================================================= */
+
+.mentorship-cover img {
+    object-position:
+        center center;
+}
+
+
+
+/* =========================================================
+   HOVER OVERLAY
+========================================================= */
+
+.mentorship-cover::before,
+.mentorship-horizontal::before,
+.mentorship-vertical::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(
+            245,
+            245,
+            242,
+            0.72
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity 0.35s ease;
+
+    z-index:
+        2;
+
+    pointer-events:
+        none;
+}
+
+
+
+/* =========================================================
+   HOVER CAPTION
+========================================================= */
+
+.mentorship-cover::after,
+.mentorship-horizontal::after,
+.mentorship-vertical::after {
+    content:
+        attr(data-caption);
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        calc(100% - 60px);
+
+    transform:
+        translate(
+            -50%,
+            -45%
+        );
+
+    font-family:
+        "Questrial",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.4;
+
+    text-align:
+        center;
+
+    color:
+        #111111;
+
+    opacity:
+        0;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+    z-index:
+        3;
+
+    pointer-events:
+        none;
+}
+
+
+
+/* =========================================================
+   HOVER STATE
+========================================================= */
+
+.mentorship-cover:hover::before,
+.mentorship-horizontal:hover::before,
+.mentorship-vertical:hover::before {
+    opacity:
+        1;
+}
+
+
+
+.mentorship-cover:hover::after,
+.mentorship-horizontal:hover::after,
+.mentorship-vertical:hover::after {
+    opacity:
+        1;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+}
+
+
+
+/* =========================================================
+   SUBTLE IMAGE SCALE ON HOVER
+========================================================= */
+
+.mentorship-cover img,
+.mentorship-horizontal img,
+.mentorship-vertical img {
+    transition:
+        transform 0.45s ease;
+}
+
+
+
+.mentorship-cover:hover img,
+.mentorship-horizontal:hover img,
+.mentorship-vertical:hover img {
+    transform:
+        scale(1.015);
+}
+
+
+
+/* =========================================================
+   REMOVE PROJECT-MEDIA DEFAULT MARGINS
+   INSIDE CUSTOM 3 IMAGE GRID
+========================================================= */
+
+.mentorship-three-image-grid
+.project-media {
+    margin:
+        0;
+}
+
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+    min-width: 1500px
+) {
+
+    .mentorship-three-image-grid {
+        height:
+            600px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MEDIUM DESKTOP
+========================================================= */
+
+@media (
+    max-width: 1200px
+) {
+
+    .mentorship-three-image-grid {
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            minmax(0, 0.9fr);
+
+        height:
+            500px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+    max-width: 900px
+) {
+
+    .mentorship-cover {
+        margin-bottom:
+            60px;
+    }
+
+
+    .mentorship-three-image-grid {
+        grid-template-columns:
+            1fr;
+
+        height:
+            auto;
+
+        gap:
+            14px;
+    }
+
+
+    .mentorship-three-left {
+        grid-template-rows:
+            none;
+
+        gap:
+            14px;
+    }
+
+
+    .mentorship-horizontal {
+        aspect-ratio:
+            16 / 9;
+
+        height:
+            auto;
+    }
+
+
+    .mentorship-three-right {
+        height:
+            auto;
+    }
+
+
+    .mentorship-vertical {
+        aspect-ratio:
+            4 / 5;
+
+        height:
+            auto;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+    max-width: 600px
+) {
+
+    .mentorship-cover {
+        aspect-ratio:
+            4 / 3;
+
+        margin-bottom:
+            45px;
+    }
+
+
+    .mentorship-three-image-grid {
+        gap:
+            10px;
+    }
+
+
+    .mentorship-three-left {
+        gap:
+            10px;
+    }
+
+
+    .mentorship-cover::after,
+    .mentorship-horizontal::after,
+    .mentorship-vertical::after {
+        width:
+            calc(100% - 30px);
+
+        font-size:
+            13px;
+    }
+
+}

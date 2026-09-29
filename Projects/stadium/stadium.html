@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Stadia: Parametric Modeling | Mauricio Gris
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../favicon.png"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- =====================================================
+     DESKTOP STYLESHEETS
+====================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../../style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../../project-style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../../stadium.css"
+>
+
+
+<!-- =====================================================
+     IPHONE OVERRIDES
+====================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../../mobile.css"
+    media="(max-width: 600px) and (orientation: portrait) and (hover: none) and (pointer: coarse), (orientation: landscape) and (max-height: 500px) and (hover: none) and (pointer: coarse)"
+>
+
+
+<!-- =====================================================
+     IPAD OVERRIDES
+====================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../../IPAD.CSS"
+    media="(min-width: 601px) and (min-height: 501px) and (max-width: 1400px) and (hover: none) and (pointer: coarse)"
+>
+</head>
+
+
+<body class="project-page project-stadium-page">
+
+
+    <!-- =====================================================
+         PORTFOLIO LOADER
+    ====================================================== -->
+
+    <div id="portfolio-loader">
+
+    <img
+        class="loader-icon"
+        src="../twisting-tower-loader.svg"
+        alt=""
+    >
+
+</div>
+
+
+    <!-- =====================================================
+         HEADER / PROJECT NAME
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <a
+            href="../../index.html"
+            class="logo"
+        >
+            Mauricio Gris
+        </a>
+
+    </header>
+
+
+    <!-- =====================================================
+         PROJECT SUBTITLE
+    ====================================================== -->
+
+    <section class="hero">
+
+        <h1 class="project-title">
+            Stadia: Parametric Modeling
+        </h1>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECT CONTENT
+    ====================================================== -->
+
+    <main class="project-content">
+
+        <section class="project-grid">
+
+            <!-- PRIMARY PROJECT IMAGE -->
+            <div class="stadia-media-slot stadia-primary-slot">
+                <img
+                    src="../../Images/stadium/azteca.jpg"
+                    alt="Stadia parametric modeling project"
+                >
+                <div class="stadia-primary-hover">
+                    <p>
+                        This study explores the power of parametric design to model 3 existing stadiums,
+                        implementing a SHARED algorithmic logic based on the control of geometric data
+                        inputs that establish rules and relationships, while also tackling the
+                        idiosynchracies of each collosal structure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PARAMETRIC STUDIES -->
+            <div class="stadia-two-grid">
+
+                <!-- LEFT — CONCEPT SLIDER -->
+                <div class="stadia-media-slot">
+                    <div class="stadia-concept-slider">
+                        <div class="stadia-concept-track">
+                            <img src="../../Images/stadium/concept-01.jpg" alt="Stadia concept study" class="stadia-concept-slide active">
+                            <img src="../../Images/stadium/concept-02.jpg" alt="Stadia concept study" class="stadia-concept-slide" hidden>
+                            <img src="../../Images/stadium/concept-03.jpg" alt="Stadia concept study" class="stadia-concept-slide" hidden>
+                            <img src="../../Images/stadium/concept-04.jpg" alt="Stadia concept study" class="stadia-concept-slide" hidden>
+                            <img src="../../Images/stadium/concept-05.jpg" alt="Stadia concept study" class="stadia-concept-slide" hidden>
+                            <img src="../../Images/stadium/concept-06.jpg" alt="Stadia concept study" class="stadia-concept-slide" hidden>
+                        </div>
+
+                        <button class="stadia-concept-prev" type="button" aria-label="Previous concept image">←</button>
+                        <button class="stadia-concept-next" type="button" aria-label="Next concept image">→</button>
+
+                        <div class="stadia-concept-counter">
+                            <span class="stadia-concept-current">01</span>
+                            <span class="stadia-concept-total"> / 06</span>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- RIGHT — BOWL OPENING VIDEO -->
+<div class="stadia-media-slot stadia-bowl-video-slot">
+
+    <div class="stadia-bowl-video-crop">
+
+        <video
+            class="stadia-bowl-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source
+                src="../../Images/stadium/bowl.opening.mp4"
+                type="video/mp4"
+            >
+        </video>
+
+    </div>
+
+</div>
+
+            </div>
+               <!-- =========================================================
+     PARAMETRIC STUDIES
+     VIDEO LEFT + CONCEPT SLIDER RIGHT
+========================================================= -->
+
+<div class="stadia-two-grid stadia-two-grid-reversed">
+
+    <!-- LEFT — LOOPING VIDEO -->
+<div class="stadia-media-slot stadia-video-slot">
+    <div class="stadia-video-stage">
+
+        <video class="stadia-loop-video" autoplay muted loop playsinline>
+            <source
+                src="../../Images/stadium/raking.effect.mp4"
+                type="video/mp4"
+            >
+        </video>
+
+        <!-- TEMPORARY CROP / BOUNDING BOX -->
+        <div class="stadia-video-bounds"></div>
+
+    </div>
+</div>
+    <!-- RIGHT — CONCEPT SLIDER -->
+    <div class="stadia-media-slot stadia-slider-slot">
+        <div class="stadia-concept-slider">
+
+            <div class="stadia-concept-track">
+                <img
+                    src="../../Images/stadium/concept-07.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide active"
+                >
+                <img
+                    src="../../Images/stadium/concept-08.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide"
+                    hidden
+                >
+                <img
+                    src="../../Images/stadium/concept-09.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide"
+                    hidden
+                >
+                <img
+                    src="../../Images/stadium/concept-10.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide"
+                    hidden
+                >
+                <img
+                    src="../../Images/stadium/concept-11.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide"
+                    hidden
+                >
+                <img
+                    src="../../Images/stadium/concept-12.jpg"
+                    alt="Stadia concept study"
+                    class="stadia-concept-slide"
+                    hidden
+                >
+            </div>
+
+            <button
+                class="stadia-concept-prev"
+                type="button"
+                aria-label="Previous concept image"
+            >
+                ←
+            </button>
+
+            <button
+                class="stadia-concept-next"
+                type="button"
+                aria-label="Next concept image"
+            >
+                →
+            </button>
+
+            <div class="stadia-concept-counter">
+                <span class="stadia-concept-current">01</span>
+                <span class="stadia-concept-total"> / 06</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+          <!-- =========================================================
+     VISIBILITY COMPARISON
+     INTERACTIVE BUBBLES
+========================================================= -->
+
+<div class="stadia-media-slot stadia-wide-slot">
+
+    <div class="stadia-visibility-map">
+
+        <img
+            src="../../Images/stadium/visibility-comparison-02.jpg"
+            alt="Visibility comparison between three stadium bowls"
+            class="stadia-visibility-image"
+        >
+
+
+        <!-- NEW DELHI -->
+
+        <button
+            class="stadia-data-bubble bubble-delhi"
+            type="button"
+            data-stadia-image="../../Images/stadium/jawa.data.png"
+            aria-label="Open New Delhi stadium data"
+        >
+            <span class="stadia-data-bubble-inner"></span>
+        </button>
+
+
+        <!-- CAPE TOWN -->
+
+        <button
+            class="stadia-data-bubble bubble-cape"
+            type="button"
+            data-stadia-image="../../Images/stadium/mabhida.data.png"
+            aria-label="Open Cape Town stadium data"
+        >
+            <span class="stadia-data-bubble-inner"></span>
+        </button>
+
+
+        <!-- MEXICO CITY -->
+
+        <button
+            class="stadia-data-bubble bubble-mexico"
+            type="button"
+            data-stadia-image="../../Images/stadium/azteca.data.png"
+            aria-label="Open Mexico City stadium data"
+        >
+            <span class="stadia-data-bubble-inner"></span>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     STADIA DATA OVERLAY
+========================================================= -->
+
+<div
+    class="stadia-data-overlay"
+    id="stadia-data-overlay"
+    aria-hidden="true"
+>
+
+    <button
+        class="stadia-data-overlay-close"
+        type="button"
+        aria-label="Close stadium data"
+    >
+        ×
+    </button>
+
+    <img
+        class="stadia-data-overlay-image"
+        src=""
+        alt="Stadium data graphic"
+    >
+
+</div>
+
+</div>
+
+            <!-- DEVELOPMENT -->
+<div class="stadia-development-grid">
+
+    <!-- LEFT IMAGE -->
+    <div class="stadia-media-slot stadia-development-card">
+        <img
+            src="../../Images/stadium/azteca.jpg"
+            alt="Stadia concept study"
+        >
+
+        <div class="stadia-development-hover">
+            <p>
+                Estadio Azteca, now Estadio Banorte. In collaboration with Emilio Lopez
+            </p>
+        </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="stadia-media-slot stadia-development-card">
+        <img
+            src="../../Images/stadium/stadium.3dprint.jpg"
+            alt="Stadia concept study"
+        >
+
+        <div class="stadia-development-hover">
+            <p>
+                Jawaharlal Nehru Stadium. In collaboration with Kayla Duong
+            </p>
+        </div>
+    </div>
+
+</div>
+
+            <!-- FINAL PROJECT MEDIA -->
+            <div class="stadia-media-slot stadia-final-slot">
+                <div class="stadia-media-slot">
+                      <img
+                    src="../../Images/stadium/jawa.frontview.jpg"
+                    alt="Stadia concept study"
+                    hidden
+                >
+            </div>
+
+        </section>
+    </main>
+
+    <!-- PROJECTS PANEL -->
+    <div class="projects-panel">
+        <a href="../cenote/cenote.html" class="project-cenote">Cenote Research Institute</a>
+        <a href="../russell-lofts-farm/russell-lofts-farm.html" class="project-russell">Russell Lofts & Farm</a>
+        <a href="../stadium/stadium.html" class="project-stadium">Stadia Parametric Modeling</a>
+        <a href="../sue mango/sue-mango-garden.html" class="project-sue">Sue Mango Garden</a>
+        <a href="../mentorship/mentorship.html" class="project-mentorship">Mentorship & Leadership Programs: NOMAS, Autodesk, AIAS</a>
+        <a href="../personal work/personal-work.html" class="project-personal-work">Personal Work</a>
+    </div>
+
+    <!-- PROJECT BRIEF PANEL -->
+    <div class="brief-panel">
+        <button class="brief-close" type="button" aria-label="Close project brief">×</button>
+
+        <div class="brief-content">
+            <h2>Project Brief</h2>
+            <p>
+                Stadia: Parametric Modeling explores stadium design through rule-based digital workflows
+                and iterative geometric systems. The project investigates relationships between stadium
+                form, seating geometry, circulation, structural logic, and envelope development through
+                parametric modeling. Rather than treating these elements as isolated design decisions,
+                the workflow establishes interconnected variables that allow multiple architectural
+                configurations to be generated, evaluated, and refined.
+            </p>
+        </div>
+
+        <div class="brief-meta">
+            Typology: Stadium / Parametric Design | Software: Grasshopper + Rhino
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+    <a href="../../index.html" class="bottom-nav-side bottom-nav-back">Back to Index</a>
+
+    <nav class="bottom-nav project-bottom-nav">
+        <button class="projects-toggle" type="button">Projects</button>
+        <button class="brief-toggle" type="button">Project Brief</button>
+        <button class="contact-trigger" type="button">Contact</button>
+    </nav>
+
+    <a href="../../resume.html" class="bottom-nav-side bottom-nav-resume">Résumé</a>
+
+    <!-- CONTACT LIGHTBOX -->
+    <div class="contact-overlay" id="contact-overlay" aria-hidden="true">
+        <div class="contact-card">
+            <button class="contact-close" type="button" aria-label="Close contact panel">×</button>
+
+            <div class="contact-visual"></div>
+            <div class="contact-divider"></div>
+
+            <div class="contact-info">
+                <h2>Let's get in touch.</h2>
+
+                <p>
+                    Contact me at
+                    <a href="mailto:mauriciogrisperez@gmail.com">
+                        mauriciogrisperez@gmail.com
+                    </a>
+                </p>
+
+                <div class="contact-links">
+                    <a
+                        href="https://www.linkedin.com/in/mauricio-gris-nomas-aias-29b387235/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/maugrisss/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

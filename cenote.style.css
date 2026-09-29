@@ -1,0 +1,1536 @@
+/* -------------------------
+   PROJECT PAGE VARIABLES
+------------------------- */
+
+:root {
+    --project-grid-columns: 12;
+    --project-grid-gap: 16px;
+}
+
+
+/* -------------------------
+   PROJECT PAGE
+------------------------- */
+
+.project-page {
+    min-height: 100vh;
+}
+
+
+/* -------------------------
+   PROJECT TITLE
+------------------------- */
+
+.project-page .project-title {
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* -------------------------
+   PROJECT CONTENT
+------------------------- */
+
+.project-content {
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+
+    padding-bottom: 80px;
+}
+
+
+/* -------------------------
+   12-COLUMN PROJECT GRID
+------------------------- */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    column-gap: var(--project-grid-gap);
+    row-gap: var(--project-grid-gap);
+
+    width: 100%;
+}
+
+
+/* -------------------------
+   GRID SPANS
+------------------------- */
+
+.span-12 {
+    grid-column: span 12;
+}
+
+.span-10 {
+    grid-column: span 10;
+}
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+
+/* -------------------------
+   CENTERED GRID SPANS
+------------------------- */
+
+.span-10-centered {
+    grid-column: 2 / span 10;
+}
+
+.span-8-centered {
+    grid-column: 3 / span 8;
+
+    margin-top: 30px;
+}
+
+.span-8-centered_2 {
+    grid-column: 3 / span 8;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.span-6-centered {
+    grid-column: 4 / span 6;
+}
+
+.span-12-centered {
+    grid-column: 1 / span 12;
+
+    margin-top: 30px;
+}
+
+/* -------------------------
+   PROJECT MEDIA
+------------------------- */
+
+.project-media {
+    width: 100%;
+    min-width: 0;
+}
+
+.project-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+}
+
+/* -------------------------
+   TWO IMAGE GRID
+   1 × 2 / SPAN-6 CENTERED
+------------------------- */
+
+.two-image-grid {
+    grid-column: 4 / span 6;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 16px;
+    row-gap: 16px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 100%;
+}
+
+
+/* -------------------------
+   TWO IMAGE GRID MEDIA
+------------------------- */
+
+.two-image-grid figure {
+    width: 100%;
+    min-width: 0;
+}
+
+.two-image-grid img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------
+   TWO IMAGE GRID — PORTRAIT
+   CENTERED / CONTROLLED SIZE
+------------------------- */
+
+.two-image-grid-portrait {
+    grid-column: 2 / span 8;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 24px;
+
+    width: 70%;
+    max-width: 750px;
+
+    justify-self: center;
+    align-items: start;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* -------------------------
+   TWO IMAGE GRID MEDIA — PORTRAIT
+------------------------- */
+
+.two-image-grid-portrait figure {
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+}
+
+
+.two-image-grid-portrait img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+}
+
+/* -------------------------
+   FOUR IMAGE GRID
+   2 × 2 / SPAN-8 CENTERED
+------------------------- */
+
+.four-image-grid {
+    grid-column: 3 / span 8;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 16px;
+    row-gap: 16px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 100%;
+}
+
+
+/* -------------------------
+   FOUR IMAGE GRID MEDIA
+------------------------- */
+
+.four-image-grid figure {
+    width: 100%;
+    min-width: 0;
+}
+
+.four-image-grid img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------
+   BRIEF BUTTON
+------------------------- */
+
+.brief-toggle {
+    background: none;
+    border: none;
+
+    padding: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.brief-toggle::before {
+    content: "+";
+
+    margin-right: 6px;
+}
+
+.bottom-nav.brief-open .brief-toggle::before {
+    content: "−";
+}
+
+
+/* -------------------------
+   CENOTE BOTTOM NAVIGATION
+------------------------- */
+
+.project-bottom-nav {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    width: 400px;
+}
+
+
+/* Projects — left */
+
+.project-bottom-nav .projects-toggle {
+    justify-self: start;
+}
+
+
+/* Project Brief — center */
+
+.project-bottom-nav .brief-toggle {
+    justify-self: center;
+}
+
+
+/* Contact — right */
+
+.project-bottom-nav > a {
+    justify-self: end;
+}
+
+
+/* -------------------------
+   PROJECT PANEL LINE STATES
+------------------------- */
+
+.bottom-nav.projects-open::before,
+.bottom-nav.brief-open::before {
+    bottom: 170px;
+}
+
+
+/* -------------------------
+   PROJECT-SPECIFIC STYLES
+------------------------- */
+
+/* Cenote Research Institute */
+
+.project-cenote-page {
+    --project-accent: #2aafc8;
+}
+
+/* =========================================================
+   CRI INTERACTIVE SITE SECTION
+========================================================= */
+
+.cri-interactive-media {
+    position: relative;
+
+    overflow: visible;
+}
+
+.cri-site-section-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   CRI BUBBLES
+========================================================= */
+
+.cri-bubble {
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: 2px solid #111111;
+    border-radius: 50%;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    animation:
+        cri-bubble-beat
+        1.25s
+        infinite;
+}
+
+
+/* INNER INSET DOT */
+
+.cri-bubble-inner {
+    width: 8px;
+    height: 8px;
+
+    background: #111111;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CRI BUBBLE BEAT
+========================================================= */
+
+@keyframes cri-bubble-beat {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    14% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.28);
+    }
+
+    27% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    40% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.16);
+    }
+
+    53% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   BUBBLE HOVER
+========================================================= */
+
+.cri-bubble:hover {
+    animation-play-state: paused;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.0);
+}
+
+
+/* =========================================================
+   CRI IMAGE OVERLAY
+========================================================= */
+
+.cri-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+
+    background:
+        rgba(245, 245, 242, 0.96);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   OPEN STATE
+========================================================= */
+
+.cri-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.cri-overlay-image {
+    display: block;
+
+    max-width: 88vw;
+    max-height: 84vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.cri-overlay-close {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    font-family:
+        "Questrial",
+        sans-serif;
+
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    z-index: 1002;
+}
+
+
+/* =========================================================
+   IMAGE SLIDER ARROWS
+========================================================= */
+
+.cri-overlay-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 70px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    font-family:
+        "Questrial",
+        sans-serif;
+
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    z-index: 1002;
+}
+
+
+/* ---------------------------------------------------------
+   PREVIOUS
+--------------------------------------------------------- */
+
+.cri-overlay-prev {
+    left: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   NEXT
+--------------------------------------------------------- */
+
+.cri-overlay-next {
+    right: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+--------------------------------------------------------- */
+
+.cri-overlay-arrow:hover {
+    opacity: 1;
+}
+
+
+.cri-overlay-prev:hover {
+    transform:
+        translateY(-50%)
+        translateX(-3px);
+}
+
+
+.cri-overlay-next:hover {
+    transform:
+        translateY(-50%)
+        translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   HIDDEN STATE
+--------------------------------------------------------- */
+
+.cri-overlay-arrow[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .cri-overlay {
+        padding: 30px;
+    }
+
+
+    .cri-overlay-image {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+
+
+    .cri-overlay-close {
+        top: 20px;
+        right: 20px;
+
+        font-size: 30px;
+    }
+
+
+    .cri-overlay-arrow {
+        width: 45px;
+        height: 60px;
+
+        font-size: 28px;
+    }
+
+
+    .cri-overlay-prev {
+        left: 10px;
+    }
+
+
+    .cri-overlay-next {
+        right: 10px;
+    }
+
+}
+
+/* =========================================================
+   CRI FLOOR PLAN SLIDER
+========================================================= */
+
+.cri-floorplan-slider {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   CRI FLOOR PLAN SLIDES
+   HIDE EVERYTHING BY DEFAULT
+========================================================= */
+
+.cri-floorplan-slider .slider-image {
+    display: none;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 78vh;
+
+    object-fit: contain;
+}
+
+
+/* ONLY ACTIVE FLOOR PLAN IS VISIBLE */
+
+.cri-floorplan-slider .slider-image.active {
+    display: block;
+}
+
+
+/* =========================================================
+   CRI FLOOR PLAN ARROWS
+   RUSSELL STYLE / OUTSIDE IMAGE
+========================================================= */
+
+.cri-floorplan-slider .slider-button {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: black;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 20;
+}
+
+
+/* LEFT ARROW — OUTSIDE */
+
+.cri-floorplan-slider .slider-prev {
+    left: -45px;
+}
+
+
+/* RIGHT ARROW — OUTSIDE */
+
+.cri-floorplan-slider .slider-next {
+    right: -45px;
+}
+
+
+/* HOVER */
+
+.cri-floorplan-slider .slider-button:hover {
+    opacity: 0.5;
+}
+
+/* =========================================================
+   CRI INTERACTIVE IMAGE INSIDE GRID
+========================================================= */
+
+.cri-grid-interactive {
+    position: relative;
+}
+
+/* =========================================================
+   CONTEXT / RESEARCH GRID
+   SITE PLAN SIZE EXCEPTION
+========================================================= */
+
+.context-siteplan {
+    display: flex;
+
+    align-items: left;
+    justify-content: center;
+}
+
+
+.context-siteplan img {
+    width: 80%;
+    height: auto;
+}
+
+/* =========================================================
+   GRAPE — INTERACTIVE CUTAWAY
+   BUBBLE → FOCAL ZOOM → CLICK IMAGE TO RESET
+========================================================= */
+
+
+/* =========================================================
+   GRAPE VIEWPORT
+========================================================= */
+
+.grape-viewport {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   GRAPE ZOOM LAYER
+========================================================= */
+
+.grape-layer {
+    position: relative;
+
+    width: 100%;
+
+    transform-origin: 0 0;
+
+    transform:
+        translate(0px, 0px)
+        scale(1);
+
+    transition:
+        transform 1s
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   GRAPE IMAGE
+========================================================= */
+
+.grape-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   GRAPE BUBBLES
+========================================================= */
+
+.grape-bubble {
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: transparent;
+
+    transform:
+        translate(-50%, -50%);
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   GRAPE BUBBLE INNER
+========================================================= */
+
+.grape-bubble-inner {
+    position: absolute;
+
+    inset: 0;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 255, 255, 0.12),
+
+        0 0 10px
+        rgba(255, 255, 255, 0.5);
+
+    animation:
+        grapeBubbleBeat
+        1.8s
+        ease-in-out
+        infinite;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   GRAPE BUBBLE HOVER
+========================================================= */
+
+.grape-bubble:hover
+.grape-bubble-inner {
+
+    transform:
+        scale(1.25);
+
+    animation-play-state:
+        paused;
+
+    box-shadow:
+        0 0 0 7px
+        rgba(255, 255, 255, 0.18),
+
+        0 0 22px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   HIDE BUBBLES WHILE ZOOMED
+========================================================= */
+
+.grape-viewport.is-zoomed
+.grape-bubble {
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ZOOM-OUT CURSOR
+========================================================= */
+
+.grape-viewport.is-zoomed {
+    cursor: zoom-out;
+}
+
+
+/* =========================================================
+   GRAPE BUBBLE BEAT
+========================================================= */
+
+@keyframes grapeBubbleBeat {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0 4px
+            rgba(255, 255, 255, 0.12),
+
+            0 0 10px
+            rgba(255, 255, 255, 0.5);
+    }
+
+
+    50% {
+
+        box-shadow:
+            0 0 0 8px
+            rgba(255, 255, 255, 0.03),
+
+            0 0 20px
+            rgba(255, 255, 255, 0.85);
+    }
+
+}
+
+/* =========================================================
+   CRI BUBBLE IMAGE SLIDER
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   OVERLAY IMAGE TRANSITION
+--------------------------------------------------------- */
+
+.cri-overlay-image {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   SLIDE OUT
+--------------------------------------------------------- */
+
+.cri-overlay-image.cri-slide-out-left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.cri-overlay-image.cri-slide-out-right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SLIDE IN STARTING POSITIONS
+--------------------------------------------------------- */
+
+.cri-overlay-image.cri-slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.cri-overlay-image.cri-slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+
+/* =========================================================
+   SLIDER ARROWS
+========================================================= */
+
+.cri-overlay-slider-button {
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 70px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    color: #ffffff;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10002;
+
+    opacity: 0.75;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* SHOW ONLY WHEN SLIDER BUBBLE IS ACTIVE */
+
+.cri-overlay-slider-button.active {
+    display: flex;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT / RIGHT POSITION
+--------------------------------------------------------- */
+
+.cri-overlay-slider-prev {
+    left: 30px;
+}
+
+.cri-overlay-slider-next {
+    right: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+--------------------------------------------------------- */
+
+.cri-overlay-slider-button:hover {
+    opacity: 1;
+}
+
+
+/* KEEP VERTICAL CENTERING WHILE HOVERING */
+
+.cri-overlay-slider-prev:hover {
+    transform:
+        translateY(-50%)
+        translateX(-3px);
+}
+
+.cri-overlay-slider-next:hover {
+    transform:
+        translateY(-50%)
+        translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .cri-overlay-slider-button {
+        width: 40px;
+        height: 60px;
+
+        font-size: 38px;
+    }
+
+    .cri-overlay-slider-prev {
+        left: 10px;
+    }
+
+    .cri-overlay-slider-next {
+        right: 10px;
+    }
+
+}
+
+/* =========================================================
+   BANANA INTERACTION
+   CONTEXT SITE PLAN ONLY
+========================================================= */
+
+.banana-figure {
+    position: relative;
+}
+
+
+/* =========================================================
+   BANANA POINT
+========================================================= */
+
+.banana-point {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   BANANA BUBBLE
+   SMALLER / STATIC
+========================================================= */
+
+.banana-bubble {
+    width: 18px;
+    height: 18px;
+
+    padding: 0;
+
+    border: 1.5px solid #111111;
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition:
+        transform 0.18s ease;
+}
+
+
+/* -------------------------
+   INNER DOT
+------------------------- */
+
+.banana-bubble::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #111111;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+/* -------------------------
+   HOVER / ACTIVE
+------------------------- */
+
+.banana-point:hover .banana-bubble,
+.banana-point.active .banana-bubble {
+    transform: scale(1.15);
+}
+
+
+/* =========================================================
+   BANANA TEXT CARD
+========================================================= */
+
+.banana-card {
+    position: absolute;
+
+    left: 42px;
+    top: 50%;
+
+    width: 220px;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-50%)
+        translateX(-10px);
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s ease;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   OPEN STATE
+========================================================= */
+
+.banana-point:hover .banana-card,
+.banana-point.active .banana-card {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(-50%)
+        translateX(0);
+
+    pointer-events: auto;
+}
+
+/* =========================================================
+   CENOTE — IPHONE INTERACTIONS
+========================================================= */
+
+
+/* =========================================================
+   CRI BUBBLES
+   LARGE TOUCH AREA / SMALLER VISIBLE BUBBLE
+========================================================= */
+
+.project-cenote-page .cri-bubble {
+
+    /* comfortable finger target */
+    width: 44px;
+    height: 44px;
+
+    /* button itself becomes invisible */
+    border: none;
+    background: transparent;
+
+    /* stop desktop animation on the button */
+    animation: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+}
+
+
+/* Visible bubble */
+
+.project-cenote-page .cri-bubble-inner {
+
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1.5px solid #111111;
+    border-radius: 50%;
+
+    background: transparent;
+
+    animation:
+        cri-mobile-bubble-beat
+        1.6s
+        ease-in-out
+        infinite;
+}
+
+
+/* Center dot */
+
+.project-cenote-page .cri-bubble-inner::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    background: #111111;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Smaller mobile pulse */
+
+@keyframes cri-mobile-bubble-beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =========================================================
+   REMOVE CRI HOVER BEHAVIOR
+========================================================= */
+
+.project-cenote-page .cri-bubble:hover {
+
+    animation: none;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   GRAPE CUTAWAY BUBBLES
+   SAME TOUCH PRINCIPLE
+========================================================= */
+
+.project-cenote-page .grape-bubble {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+}
+
+
+.project-cenote-page .grape-bubble-inner {
+
+    position: relative;
+
+    inset: auto;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1.5px solid white;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.10),
+        0 0 8px rgba(255, 255, 255, 0.45);
+
+    animation:
+        grape-mobile-beat
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes grape-mobile-beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* Remove desktop hover enlargement */
+
+.project-cenote-page .grape-bubble:hover
+.grape-bubble-inner {
+
+    transform: scale(1);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.10),
+        0 0 8px rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   BANANA SITE-PLAN POINTS
+   TAP ONLY — NO HOVER REVEAL
+========================================================= */
+
+.project-cenote-page .banana-point:hover .banana-bubble {
+    transform: none;
+}
+
+.project-cenote-page .banana-point:hover .banana-card {
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(-50%)
+        translateX(-10px);
+
+    pointer-events: none;
+}
+
+
+/* Keep click / active state working */
+
+.project-cenote-page .banana-point.active .banana-bubble {
+    transform: scale(1.15);
+}
+
+.project-cenote-page .banana-point.active .banana-card {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(-50%)
+        translateX(0);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   REMOVE ARROW HOVER EFFECTS
+========================================================= */
+
+.project-cenote-page .cri-floorplan-slider .slider-button:hover,
+.project-cenote-page .cri-overlay-arrow:hover,
+.project-cenote-page .cri-overlay-slider-button:hover {
+    opacity: inherit;
+}

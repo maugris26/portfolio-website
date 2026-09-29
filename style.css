@@ -1,0 +1,1416 @@
+/* -------------------------
+   GLOBAL
+------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f2;
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+}
+
+/* =========================================================
+   PORTFOLIO LOADING SCREEN
+========================================================= */
+
+#portfolio-loader {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+
+    opacity: 1;
+    visibility: visible;
+
+    z-index: 999999;
+}
+
+
+/* =========================================================
+   LOADING ICON
+========================================================= */
+
+#portfolio-loader .loader-icon {
+    display: block;
+
+    width: 150px;
+ height: 150px;;
+
+    opacity: 1;
+    visibility: visible;
+
+    position: relative;
+    z-index: 1;
+
+    transform-origin: center;
+
+    animation: loaderBeat 1.6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOADING ICON — BEAT
+========================================================= */
+
+@keyframes loaderBeat {
+
+    0%,
+    42%,
+    58%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.015);
+    }
+}
+
+
+/* =========================================================
+   LOADER EXIT
+========================================================= */
+
+#portfolio-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #portfolio-loader .loader-icon {
+        animation: none;
+    }
+
+}
+
+/* =========================================================
+   REST OF WEBSITE
+========================================================= */
+
+/* your existing CSS continues... */
+/* -------------------------
+   VARIABLES
+------------------------- */
+
+:root {
+    --page-margin: 35px;
+    --title-gap: 2px;
+}
+
+
+/* -------------------------
+   NAME / LOGO
+------------------------- */
+
+.site-header {
+    padding-top: 40px;
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+    padding-bottom: 0;
+}
+
+.logo {
+    font-family: "Questrial", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #111111;
+    text-decoration: none;
+
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+
+/* -------------------------
+   HERO / SELECTED WORKS
+------------------------- */
+
+.hero {
+    margin-top: var(--title-gap);
+
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+}
+
+.hero h1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.hero-link {
+    color: #111111;
+    text-decoration: none;
+
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+
+    letter-spacing: 0;
+}
+
+
+/* -------------------------
+   PROJECTS PANEL
+------------------------- */
+
+.projects-panel {
+    position: fixed;
+
+    bottom: 50px;
+    left: 0;
+
+    width: 100%;
+
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    background-color: #f5f5f2;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
+
+    z-index: 110;
+}
+
+
+/* Projects panel open */
+
+.projects-panel.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* Project links */
+
+.projects-panel a {
+    color: #111111;
+    text-decoration: none;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: color 0.2s ease;
+}
+
+
+/* Project list dash */
+
+.projects-panel a::before {
+    content: "-";
+    margin-right: 8px;
+}
+
+
+/* -------------------------
+   PROJECT HOVER COLORS
+------------------------- */
+
+.projects-panel a.project-cenote:hover {
+    color: #2aafc8;
+}
+
+.projects-panel a.project-russell:hover {
+    color: #d10c02;
+}
+
+.projects-panel a.project-stadium:hover {
+    color: #ebb358;
+}
+
+.projects-panel a.project-sue:hover {
+    color: #f15f2e;
+}
+
+.projects-panel a.project-mentorship:hover {
+    color: #934f9f;
+}
+
+.projects-panel a.project-personal-work:hover {
+    color: #8186bd;
+}
+
+
+/* -------------------------
+   BOTTOM NAVIGATION
+------------------------- */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 400px;
+
+    z-index: 100;
+
+    isolation: isolate;
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   SIDE CONTROLS
+========================================================= */
+
+
+/* -------------------------
+   SHARED SIDE CONTROL
+------------------------- */
+
+.bottom-nav-side {
+    position: fixed;
+
+    bottom: 10px;
+
+    z-index: 1000;
+
+    display: block;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #111111;
+    text-decoration: none;
+
+    visibility: visible;
+    opacity: 1;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+/* -------------------------
+   LEFT
+   BACK TO CONTENTS
+------------------------- */
+
+.bottom-nav-side.bottom-nav-back {
+    left: var(--page-margin, 35px);
+    right: auto;
+}
+
+
+/* -------------------------
+   RIGHT
+   RÉSUMÉ
+------------------------- */
+
+.bottom-nav-side.bottom-nav-resume {
+    left: auto;
+    right: var(--page-margin, 35px);
+}
+
+
+/* -------------------------
+   HOVER
+------------------------- */
+
+.bottom-nav-side:not(.disabled):hover {
+    opacity: 0.5;
+}
+
+
+/* -------------------------
+   CURRENT PAGE / DISABLED
+------------------------- */
+
+.bottom-nav-side.disabled {
+    opacity: 0.35;
+
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Full-width background */
+
+.bottom-nav::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 40px;
+
+    background-color: #f5f5f2;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+.bottom-nav a {
+    color: #111111;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+}
+
+
+/* Full-width background beneath navigation */
+
+.bottom-nav::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 40px;
+
+    background-color: #f5f5f2;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+.bottom-nav a {
+    color: #111111;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+}
+
+
+/* -------------------------
+   PROJECTS BUTTON
+------------------------- */
+
+.projects-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+/* Closed state: + Projects */
+
+.projects-toggle::before {
+    content: "+";
+    margin-right: 6px;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* Open state: − Projects */
+
+.bottom-nav.projects-open .projects-toggle::before {
+    content: "−";
+}
+
+
+/* -------------------------
+   LINE ABOVE BOTTOM NAVIGATION
+------------------------- */
+
+.bottom-nav::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #111111;
+
+    transition: bottom 0.3s ease;
+
+    pointer-events: none;
+}
+
+
+.bottom-nav.projects-open::before {
+    bottom: 170px;
+}
+
+
+/* -------------------------
+   PROJECTS OPEN STATE
+------------------------- */
+
+.bottom-nav.projects-open::before {
+    bottom: 170px;
+}
+
+
+/* Line position when Projects is open */
+
+.bottom-nav.projects-open::before {
+    bottom: 170px;
+}
+
+/* -------------------------
+   PROJECTS BUTTON
+------------------------- */
+
+.projects-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+/* Closed state: + Projects */
+
+.projects-toggle::before {
+    content: "+";
+    margin-right: 6px;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* Open state: − Projects */
+
+.bottom-nav.projects-open .projects-toggle::before {
+    content: "−";
+}
+
+
+/* -------------------------
+   LINE ABOVE BOTTOM NAVIGATION
+------------------------- */
+
+.bottom-nav::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #111111;
+
+    transition: bottom 0.3s ease;
+
+    cursor: pointer;
+}
+
+
+/* Line position when Projects is open */
+
+.bottom-nav.projects-open::before {
+    bottom: 170px;
+}
+
+/* =========================================================
+   PROJECT BRIEF PANEL
+   GLOBAL / FULL-SCREEN
+========================================================= */
+
+.brief-panel {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #f5f5f2;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease,
+        visibility 0.4s;
+
+    overflow-y: auto;
+
+    z-index: 900;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   BRIEF PARAGRAPHS 
+========================================================= */
+
+.brief-content p {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.brief-content p + p {
+    margin-top: 28px;
+}
+
+.brief-content strong {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF — OPEN
+========================================================= */
+
+.brief-panel.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF — CLOSE BUTTON
+========================================================= */
+
+.brief-close {
+    position: fixed;
+
+    top: 35px;
+    right: 35px;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    z-index: 10002;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF PANEL
+   GLOBAL / FULL-SCREEN
+========================================================= */
+
+.brief-panel {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #f5f5f2;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease,
+        visibility 0.4s;
+
+    overflow-y: auto;
+
+    z-index: 900;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF — OPEN
+========================================================= */
+
+.brief-panel.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF — CLOSE BUTTON
+========================================================= */
+
+.brief-close {
+    position: fixed;
+
+    top: 35px;
+    right: 35px;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    z-index: 10002;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF CONTENT
+========================================================= */
+
+.brief-content {
+    width: 100%;
+
+    padding-top: 40px;
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+    padding-bottom: 30px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF CONTENT
+   OPTIONAL IMAGE LAYOUT
+========================================================= */
+
+.brief-content-with-image {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 500px)
+        auto;
+
+    justify-content: space-between;
+
+    column-gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF COPY
+========================================================= */
+
+.brief-copy {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF IMAGE
+   OPTIONAL
+========================================================= */
+
+.brief-image {
+
+    /* -----------------------------------------
+       IMAGE SIZE
+       Increase / decrease this value
+    ----------------------------------------- */
+
+    width: 1000px;
+
+
+    /* -----------------------------------------
+       HORIZONTAL POSITION
+       Larger value = moves image LEFT
+    ----------------------------------------- */
+
+    margin-right: 350px;
+
+
+    /* -----------------------------------------
+       VERTICAL POSITION
+       Positive = moves DOWN
+       Negative = moves UP
+    ----------------------------------------- */
+
+    margin-top: 50px;
+
+
+    justify-self: end;
+}
+
+
+.brief-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF TITLE
+========================================================= */
+
+.brief-content h2 {
+    margin: 0 0 8px;
+
+    color: var(--project-accent, #111111);
+
+    font-family: "Questrial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PROJECT BRIEF TEXT
+========================================================= */
+
+.brief-content p {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    text-align: left;
+}
+
+/* =========================================================
+   PROJECT BRIEF METADATA
+========================================================= */
+
+.brief-meta {
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+
+    margin-top: 30px;
+
+    box-sizing: border-box;
+
+    color: var(--project-accent, #111111);
+
+    font-family: "Questrial", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+/* =========================================================
+   CONTACT LIGHTBOX
+========================================================= */
+
+.contact-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.72);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 9999;
+}
+
+
+/* -------------------------
+   ACTIVE STATE
+------------------------- */
+
+.contact-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* -------------------------
+   CONTACT CARD
+------------------------- */
+
+.contact-card {
+    position: relative;
+
+    width: min(900px, 88vw);
+    height: 360px;
+
+    background-color: #ffffff;
+
+    display: grid;
+
+    grid-template-columns:
+        280px
+        1px
+        1fr;
+
+    column-gap: 42px;
+
+    align-items: center;
+
+    padding:
+        30px
+        55px
+        30px
+        30px;
+}
+
+
+/* -------------------------
+   CONTACT VISUAL
+------------------------- */
+
+.contact-visual {
+
+    width: 280px;
+    height: 280px;
+
+    background-image:
+        url("Projects/first.assignment.three_geometries.gris.mauricio.png");
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+/* -------------------------
+   DIVIDER
+------------------------- */
+
+.contact-divider {
+    width: 1px;
+    height: 280px;
+
+    background-color: #111111;
+}
+
+
+/* -------------------------
+   CONTACT INFORMATION
+------------------------- */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.contact-info h2 {
+    margin: 0 0 22px 0;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+
+.contact-info p {
+    margin: 0 0 28px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.contact-info a {
+    color: #111111;
+
+    text-decoration: none;
+}
+
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* -------------------------
+   SOCIAL LINKS
+------------------------- */
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.contact-links a {
+    font-size: 16px;
+}
+
+
+/* -------------------------
+   CLOSE BUTTON
+------------------------- */
+
+.contact-close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTACT BOTTOM NAV BUTTON
+========================================================= */
+
+.contact-trigger {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   TABLE OF CONTENTS
+========================================================= */
+
+.toc-section {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding:
+        0
+        var(--page-margin)
+        70px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE OF CONTENTS STAGE
+   15 × 8.25 LANDSCAPE ARTBOARD
+========================================================= */
+
+.toc-stage {
+    position: relative;
+
+    width:
+        min(
+            calc(100vw - (var(--page-margin) * 2)),
+            calc((100vh - 180px) * (15 / 8.25))
+        );
+
+    aspect-ratio: 15 / 8.25;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BASE IMAGE
+========================================================= */
+
+.toc-base {
+    display: block;
+
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   COLOR OVERLAYS
+========================================================= */
+
+.toc-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transition:
+        opacity 0.22s ease;
+}
+
+
+/* =========================================================
+   INTERACTIVE PROJECT CELLS
+========================================================= */
+
+.toc-hitbox {
+    position: absolute;
+
+    width: 25%;
+    height: 33.333333%;
+
+    z-index: 3;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PROJECT 01
+   CENOTE
+   ROW 1 / COLUMN 2
+========================================================= */
+
+.toc-hitbox-cenote {
+    left: 25%;
+    top: 0;
+}
+
+
+/* =========================================================
+   PROJECT 02
+   RUSSELL
+   ROW 1 / COLUMN 4
+========================================================= */
+
+.toc-hitbox-russell {
+    left: 75%;
+    top: 0;
+}
+
+/* =========================================================
+   PROJECT 03
+   STADIA
+   ROW 2 / COLUMN 1
+========================================================= */
+
+.toc-hitbox-stadium {
+    left: 0%;
+    top: 33.333333%;
+    width: 25%;
+}
+
+
+/* =========================================================
+   PROJECT 04
+   SUE MANGO
+   ROW 2 / COLUMN 3
+========================================================= */
+
+.toc-hitbox-sue {
+    left: 50%;
+    top: 33.333333%;
+
+    width: 25%;
+}
+
+
+/* =========================================================
+   PROJECT 05
+   NOMAS
+   ROW 3 / COLUMN 2
+========================================================= */
+
+.toc-hitbox-nomas {
+    left: 25%;
+    top: 66.666666%;
+}
+
+
+/* =========================================================
+   PROJECT 06
+   PERSONAL WORK
+   ROW 3 / COLUMN 4
+========================================================= */
+
+.toc-hitbox-personal {
+    left: 75%;
+    top: 66.666666%;
+}
+
+
+/* =========================================================
+   COLOR IMAGE REVEALS
+========================================================= */
+
+
+/* CENOTE */
+
+.toc-hitbox-cenote:hover
+~ .toc-overlay-cenote,
+
+.toc-hitbox-cenote:focus-visible
+~ .toc-overlay-cenote {
+
+    opacity: 1;
+}
+
+
+/* RUSSELL */
+
+.toc-hitbox-russell:hover
+~ .toc-overlay-russell,
+
+.toc-hitbox-russell:focus-visible
+~ .toc-overlay-russell {
+
+    opacity: 1;
+}
+
+/* STADIA */
+
+.toc-hitbox-stadium:hover
+~ .toc-overlay-stadium,
+
+.toc-hitbox-stadium:focus-visible
+~ .toc-overlay-stadium {
+
+    opacity: 1;
+}
+
+/* SUE MANGO */
+
+.toc-hitbox-sue:hover
+~ .toc-overlay-sue,
+
+.toc-hitbox-sue:focus-visible
+~ .toc-overlay-sue {
+
+    opacity: 1;
+}
+
+
+/* NOMAS */
+
+.toc-hitbox-nomas:hover
+~ .toc-overlay-nomas,
+
+.toc-hitbox-nomas:focus-visible
+~ .toc-overlay-nomas {
+
+    opacity: 1;
+}
+
+
+/* PERSONAL WORK */
+
+.toc-hitbox-personal:hover
+~ .toc-overlay-personal,
+
+.toc-hitbox-personal:focus-visible
+~ .toc-overlay-personal {
+
+    opacity: 1;
+}
+
+/* =========================================================
+   RESPONSIVE ELEMENTS
+   HIDDEN BY DEFAULT ON DESKTOP
+
+   MOBILE.CSS / IPAD.CSS WILL TURN ON
+   ONLY THE ELEMENTS THEY NEED
+========================================================= */
+
+.toc-mobile-section,
+.toc-mobile-stage,
+.toc-landscape-section,
+.resume-label-mobile,
+.project-personal-page .personal-back-mobile {
+    display: none;
+}
+
+
+.resume-page ~ .bottom-nav .resume-mobile-contents {
+    display: none !important;
+}

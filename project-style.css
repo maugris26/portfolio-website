@@ -1,0 +1,961 @@
+/* -------------------------
+   PROJECT PAGE VARIABLES
+------------------------- */
+
+:root {
+    --project-grid-columns: 12;
+    --project-grid-gap: 16px;
+}
+
+
+/* -------------------------
+   PROJECT PAGE
+------------------------- */
+
+.project-page {
+    min-height: 100vh;
+}
+
+
+/* -------------------------
+   PROJECT TITLE
+------------------------- */
+
+.project-page .project-title {
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* -------------------------
+   PROJECT CONTENT
+------------------------- */
+
+.project-content {
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+
+    padding-bottom: 80px;
+}
+
+
+/* -------------------------
+   12-COLUMN PROJECT GRID
+------------------------- */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--project-grid-gap);
+    row-gap: var(--project-grid-gap);
+
+    width: 100%;
+}
+
+
+/* -------------------------
+   GRID SPANS
+------------------------- */
+
+.span-12 {
+    grid-column: span 12;
+}
+
+.span-10 {
+    grid-column: span 10;
+}
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+/* -------------------------
+   CENTERED GRID SPANS
+------------------------- */
+
+.span-10-centered {
+    grid-column: 2 / span 10;
+}
+
+.span-8-centered {
+    grid-column: 3 / span 8;
+}
+
+.span-8-centered_2 {
+    grid-column: 3 / span 8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.span-6-centered {
+    grid-column: 4 / span 6;
+}
+
+/* -------------------------
+   PROJECT MEDIA
+------------------------- */
+
+.project-media {
+    width: 100%;
+}
+
+.project-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------
+   MEDIUM PROJECT MEDIA
+------------------------- */
+
+.slider-medium {
+    grid-column: 3 / span 8;
+    margin-top: 40px;
+}
+/* -------------------------
+   CENTERED PROJECT MEDIA
+------------------------- */
+
+.project-media-centered {
+    grid-column: 3 / span 8;
+}
+
+/* =========================================================
+   RUSSELL LOFTS INTERACTIVE COVER
+   GRID COLUMN 3 / SPAN 8
+========================================================= */
+
+.russell-interactive-cover {
+    grid-column: 3 / span 8;
+
+    width: 100%;
+    max-width: none;
+
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.cover-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.interactive-cover-image {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   BUBBLES
+   28PX / VIBRANT GLOW
+========================================================= */
+
+.cover-bubble {
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transform: translate(-50%, -50%);
+
+    animation:
+        bubble-beat
+        1.8s
+        ease-in-out
+        infinite;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   BUBBLE COLORS
+========================================================= */
+
+/* ORANGE */
+
+.bubble-1,
+.bubble-2,
+.bubble-4 {
+    --bubble-color: #f27b06;
+
+    background: #f27b06;
+}
+
+
+/* RED */
+
+.bubble-3,
+.bubble-5 {
+    --bubble-color: #a3050d;
+
+    background: #a3050d;
+}
+
+
+/* =========================================================
+   BUBBLE POSITIONS
+========================================================= */
+
+.bubble-1 {
+    left: 20%;
+    top: 30%;
+
+    animation-delay: -0.45s;
+}
+
+
+.bubble-2 {
+    left: 38%;
+    top: 45%;
+
+    animation-delay: -0.45s;
+}
+
+
+.bubble-3 {
+    left: 57%;
+    top: 35%;
+
+    animation-delay: -0.9s;
+}
+
+
+.bubble-4 {
+    left: 55%;
+    top: 50%;
+
+    animation-delay: -0.45s;
+}
+
+
+.bubble-5 {
+    left: 84%;
+    top: 55%;
+
+    animation-delay: -0.9s;
+}
+
+
+/* =========================================================
+   LIVELY DOUBLE BEAT + VIBRANT GLOW
+========================================================= */
+
+@keyframes bubble-beat {
+
+    /* REST */
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        box-shadow:
+            0 0 6px var(--bubble-color),
+            0 0 14px var(--bubble-color),
+            0 0 26px var(--bubble-color),
+            0 0 42px var(--bubble-color);
+    }
+
+
+    /* FIRST STRONG BEAT */
+
+    18% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.28);
+
+        box-shadow:
+            0 0 12px var(--bubble-color),
+            0 0 26px var(--bubble-color),
+            0 0 48px var(--bubble-color),
+            0 0 72px var(--bubble-color);
+    }
+
+
+    /* QUICK RELEASE */
+
+    32% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.05);
+
+        box-shadow:
+            0 0 7px var(--bubble-color),
+            0 0 16px var(--bubble-color),
+            0 0 30px var(--bubble-color),
+            0 0 46px var(--bubble-color);
+    }
+
+
+    /* SECOND SMALLER BEAT */
+
+    45% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.18);
+
+        box-shadow:
+            0 0 10px var(--bubble-color),
+            0 0 22px var(--bubble-color),
+            0 0 40px var(--bubble-color),
+            0 0 60px var(--bubble-color);
+    }
+
+
+    /* SETTLE */
+
+    62% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        box-shadow:
+            0 0 6px var(--bubble-color),
+            0 0 14px var(--bubble-color),
+            0 0 26px var(--bubble-color),
+            0 0 42px var(--bubble-color);
+    }
+
+
+    /* REST PERIOD */
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        box-shadow:
+            0 0 6px var(--bubble-color),
+            0 0 14px var(--bubble-color),
+            0 0 26px var(--bubble-color),
+            0 0 42px var(--bubble-color);
+    }
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.cover-bubble:hover {
+    animation-play-state: paused;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.25);
+}
+
+
+/* =========================================================
+   PROCESS IMAGE OVERLAY
+========================================================= */
+
+.process-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    z-index: 20;
+}
+
+
+.process-overlay.active {
+    display: flex;
+}
+
+
+.process-overlay img {
+    width: auto;
+    height: auto;
+
+    max-width: 82%;
+    max-height: 82%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.overlay-close {
+    position: absolute;
+
+    top: 20px;
+    right: 24px;
+
+    padding: 0;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 30;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.cover-bubble:focus-visible,
+.overlay-close:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+/* -------------------------
+   BEFORE / AFTER SLIDER
+------------------------- */
+
+.before-after {
+    position: relative;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* Keep both images fixed at the same size */
+
+.before-after img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* Base image */
+
+.before-img {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 1;
+}
+
+
+/* Cropping window for the after image */
+
+.after-wrapper {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/* After image stays fixed while wrapper reveals it */
+
+.after-img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: left top;
+
+    max-width: none;
+}
+
+
+/* Slider divider */
+
+.divider {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 3px;
+    height: 100%;
+
+    background-color: white;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+
+/* -------------------------
+   SLIDER HANDLE
+------------------------- */
+
+.handle {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 44px;
+    height: 44px;
+
+    transform: translate(-50%, -50%);
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+/* Horizontal part of + */
+
+.handle::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 16px;
+    height: 2px;
+
+    background-color: white;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Vertical part of + */
+
+.handle::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 2px;
+    height: 16px;
+
+    background-color: white;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Hide old horizontal line */
+
+.handle span {
+    display: none;
+}
+
+
+/* Invisible interactive range slider */
+
+.comparison-slider {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: ew-resize;
+
+    z-index: 10;
+}
+
+/* -------------------------
+  ROOF PLANMEDIA
+------------------------- */
+
+
+.roof-plan-media {
+    grid-column: 3 / span 8;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+/* -------------------------
+   THREE IMAGE ROW
+------------------------- */
+
+.project-grid {
+    column-gap: 16px;
+    row-gap: 24px;
+}
+
+/* -------------------------
+   STANDARD MEDIA PLACEMENT
+------------------------- */
+
+.span-8-centered {
+    grid-column: 3 / span 8;
+}
+
+.span-6-centered {
+    grid-column: 4 / span 6;
+}
+
+.span-4-centered {
+    grid-column: 5 / span 4;
+}
+
+/* =========================================================
+   IMAGE SLIDER + VIDEO PAIR
+========================================================= */
+
+.project-media-pair {
+    width: calc(100% - 288px);
+
+    margin-top: 48px;
+    margin-left: 144px;
+    margin-right: 144px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 36px;
+}
+
+
+/* =========================================================
+   LEFT — PROJECT IMAGE SLIDER
+========================================================= */
+
+.project-slider {
+    position: relative;
+
+    flex: 1 1 0;
+    width: 50%;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SLIDER IMAGES
+========================================================= */
+
+.project-slider .slider-image {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    object-fit: cover;
+}
+
+.project-slider .slider-image.active {
+    display: block;
+}
+
+
+/* =========================================================
+   RIGHT — VIDEO WRAPPER
+========================================================= */
+
+.project-video-wrapper {
+    position: relative;
+
+    flex: 1 1 0;
+    width: 50%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   AUTOPLAY VIDEO
+========================================================= */
+
+.project-autoplay-video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+/* =========================================================
+   SLIDER IMAGES
+========================================================= */
+
+.slider-image {
+    width: 100%;
+    height: auto;
+
+    display: none;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+
+/* =========================================================
+   SLIDER ARROWS — COMPACT VERSION
+========================================================= */
+
+.slider-button {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: black;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.slider-button.left {
+    left: 12px;
+}
+
+.slider-button.right {
+    right: 12px;
+}
+
+.slider-button:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   LEFT ARROW
+========================================================= */
+
+.slider-button.left {
+    left: 20px;
+}
+
+
+/* =========================================================
+   RIGHT ARROW
+========================================================= */
+
+.slider-button.right {
+    right: 20px;
+}
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.slider-button:hover {
+    background: transparent;
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .slider-button {
+        font-size: 36px;
+    }
+
+    .slider-button.left {
+        left: 12px;
+    }
+
+    .slider-button.right {
+        right: 12px;
+    }
+}
+
+
+
+/* -------------------------
+   BRIEF BUTTON
+------------------------- */
+
+.brief-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #111111;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.brief-toggle::before {
+    content: "+";
+    margin-right: 6px;
+}
+
+.bottom-nav.brief-open .brief-toggle::before {
+    content: "−";
+}
+
+
+/* -------------------------
+   PROJECT PANEL LINE STATES
+------------------------- */
+
+.bottom-nav.projects-open::before,
+.bottom-nav.brief-open::before {
+    bottom: 170px;
+}
+
+/* -------------------------
+   PROJECT-SPECIFIC STYLES
+------------------------- */
+
+/* Russell Lofts & Farm */
+
+.project-russell-page {
+    --project-accent: #ebb358;
+}
+/* =========================================================
+   RUSSELL BEFORE / AFTER LABELS
+   FIRST SLIDER ONLY
+========================================================= */
+
+.russell-slider-labeled .comparison-label {
+    position: absolute;
+
+    top: 222px;
+
+    width: 150px;
+
+    padding: 9px 12px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    border-radius: 8px;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+/* LEFT LABEL */
+
+.russell-slider-labeled .comparison-label-left {
+    left: 20px;
+}
+
+
+/* RIGHT LABEL */
+
+.russell-slider-labeled .comparison-label-right {
+    right: 20px;
+}
+
+
+/* HIDDEN LABEL STATE */
+
+.russell-slider-labeled .comparison-label.is-hidden {
+    opacity: 0;
+}

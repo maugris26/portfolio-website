@@ -1,0 +1,588 @@
+/* =========================================================
+   RÉSUMÉ & EXPERIENCES
+   PAGE-SPECIFIC STYLES
+========================================================= */
+
+
+/* =========================================================
+   RÉSUMÉ GRID SETTINGS
+========================================================= */
+
+:root {
+
+    --resume-grid-columns: 12;
+    --resume-grid-gap: 16px;
+
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ PAGE
+========================================================= */
+
+.resume-page {
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ CONTENT
+   MATCHES PROJECT PAGE CONTENT STANDARD
+========================================================= */
+
+.resume-content {
+
+    width: 100%;
+
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+    padding-bottom: 80px;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* =========================================================
+   12-COLUMN RÉSUMÉ GRID
+========================================================= */
+
+.resume-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            var(--resume-grid-columns),
+            minmax(0, 1fr)
+        );
+
+    column-gap: var(--resume-grid-gap);
+    row-gap: 0;
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ INTRODUCTION
+   MAIN HEADSHOT + INFORMATION COMPOSITION
+========================================================= */
+
+.resume-introduction {
+    margin-top: 30px;
+}
+
+
+
+/* =========================================================
+   LEFT COLUMN
+   HEADSHOT + CONTACT LINKS
+========================================================= */
+
+.resume-left-column {
+    grid-column: 3 / span 3;
+    grid-row: 1;
+
+    margin-top: 50px;
+    margin-left: -75px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-self: start;
+}
+
+
+
+/* =========================================================
+   HEADSHOT
+========================================================= */
+
+.resume-headshot {
+    position: relative;
+
+    width: 75%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================================
+   HEADSHOT IMAGE
+========================================================= */
+
+.resume-headshot img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* =========================================================
+   HEADSHOT MISSION OVERLAY
+========================================================= */
+
+.resume-headshot-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+
+/* =========================================================
+   HEADSHOT OVERLAY
+   HOVER STATE
+========================================================= */
+
+.resume-headshot:hover .resume-headshot-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* =========================================================
+   HEADSHOT MISSION TEXT
+========================================================= */
+
+.resume-headshot-mission {
+    max-width: 420px;
+
+    text-align: center;
+
+    color: #111111;
+}
+
+
+
+.resume-headshot-mission h2 {
+    margin: 0 0 20px;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.resume-headshot-mission p {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+
+
+/* =========================================================
+   CONTACT / EXTERNAL LINKS
+   DIRECTLY BELOW HEADSHOT
+========================================================= */
+
+.resume-headshot-links {
+    width: 75%;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 3px;
+
+    text-align: left;
+}
+
+
+
+/* =========================================================
+   HEADSHOT LINK TEXT
+========================================================= */
+
+.resume-headshot-links a,
+.resume-headshot-links span {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    color: inherit;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.35;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================================================
+   HEADSHOT LINK HOVER
+========================================================= */
+
+.resume-headshot-links a:hover {
+    opacity: 0.5;
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ INFORMATION
+   RIGHT SIDE OF HEADSHOT
+========================================================= */
+
+.resume-information {
+    grid-column: 6 / span 6;
+    grid-row: 1;
+
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-self: stretch;
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ INFORMATION SECTION
+========================================================= */
+
+.resume-info-section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* =========================================================
+   RÉSUMÉ SECTION TITLE
+========================================================= */
+
+.resume-info-section h2 {
+    margin: 0 0 6px;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+
+/* =========================================================
+   INNER SECTION CONTENT
+========================================================= */
+
+.resume-info-content {
+    max-width: 600px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+
+/* =========================================================
+   INNER SECTION ENTRY
+========================================================= */
+
+.resume-info-entry {
+    position: relative;
+
+    margin: 0 0 5px;
+
+    padding-left: 14px;
+}
+
+
+
+/* =========================================================
+   INNER SECTION DASH
+========================================================= */
+
+.resume-info-entry::before {
+    content: "*";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+
+
+/* =========================================================
+   OPTIONAL ENTRY TITLE
+========================================================= */
+
+.resume-info-entry strong {
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   ACTIVE NAVIGATION ITEM
+========================================================= */
+
+.bottom-nav a.active {
+    opacity: 0.5;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .resume-left-column {
+        grid-column: 2 / span 4;
+        grid-row: 1;
+
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+
+    .resume-headshot {
+        width: 100%;
+    }
+
+
+    .resume-headshot-links {
+        width: 100%;
+    }
+
+
+    .resume-information {
+        grid-column: 7 / span 6;
+        grid-row: 1;
+
+        margin-top: 50px;
+    }
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .resume-introduction {
+        margin-top: 30px;
+    }
+
+
+    .resume-left-column {
+        grid-column: 1 / -1;
+        grid-row: 1;
+
+        width: 70%;
+
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+
+    .resume-headshot {
+        width: 100%;
+    }
+
+
+    .resume-headshot-links {
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+
+    .resume-information {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        margin-top: 50px;
+
+        gap: 35px;
+    }
+
+
+    .resume-info-section h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================================
+   INTERACTIVE REFERENCES
+========================================================= */
+
+.resume-references {
+    margin-top: 18px;
+    width: 100%;
+}
+
+
+/* -------------------------
+   REFERENCES TOGGLE
+------------------------- */
+
+.resume-references-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    font-size: inherit;
+    color: #111111;
+}
+
+
+/* REMOVE DEFAULT DETAILS ARROW */
+
+.resume-references-toggle::-webkit-details-marker {
+    display: none;
+}
+
+
+/* -------------------------
+   HIDE OLD RIBBON SVG
+------------------------- */
+
+.resume-references-ribbon {
+    display: none;
+}
+
+
+/* -------------------------
+   CUSTOM ARROWHEAD BUTTON
+------------------------- */
+
+.resume-references-toggle::after {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    border: 1.5px solid #111111;
+    border-radius: 4px;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 7L10 14L15 7Z' fill='%23111111'/%3E%3C/svg%3E");
+
+    background-size: 13px 13px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* HOVER */
+
+.resume-references-toggle:hover::after {
+    opacity: 0.5;
+}
+
+
+/* -------------------------
+   OPEN STATE
+------------------------- */
+
+.resume-references[open]
+.resume-references-toggle::after {
+    transform: rotate(180deg);
+}
+
+
+/* -------------------------
+   REFERENCE LIST
+------------------------- */
+
+.resume-references-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding-top: 14px;
+}
+
+
+/* -------------------------
+   INDIVIDUAL REFERENCE
+------------------------- */
+
+.resume-reference {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.resume-reference span {
+    font-size: inherit;
+    line-height: 1.35;
+}
+
+.resume-reference a {
+    font-size: 0.7em;
+    line-height: 1.35;
+
+    color: #111111;
+    text-decoration: none;
+}
+
+
+.resume-reference a:hover {
+    opacity: 0.5;
+}

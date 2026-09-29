@@ -1,0 +1,1965 @@
+/* =========================================================
+
+   IPAD RESPONSIVE LAYER
+
+   FILE: IPAD.CSS
+
+
+
+   DESKTOP REMAINS CONTROLLED BY style.css
+
+   IPHONE RULES LIVE IN mobile.css
+
+\========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   IPAD — PORTRAIT
+
+\========================================================= */
+
+
+
+@media
+
+    (orientation: portrait)
+
+    and (min-width: 601px)
+
+    and (max-width: 1400px)
+
+    and (hover: none)
+
+    and (pointer: coarse) {
+
+
+
+    .toc-mobile-section,
+
+    .toc-mobile-stage,
+
+    .toc-landscape-section,
+
+    .resume-label-mobile,
+
+    .project-personal-page .personal-back-mobile {
+
+        display: none;
+
+    }
+
+
+
+    .resume-page ~ .bottom-nav .resume-mobile-contents {
+
+        display: none !important;
+
+    }
+
+
+
+.home-page .toc-base {
+
+        content: url("Projects/toc-base-landscape.png");
+
+    }
+
+
+
+
+
+/* =========================================================
+
+   PREVENT HORIZONTAL PAGE SLIDING
+
+\========================================================= */
+
+
+
+html,
+
+body {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: hidden;
+
+}
+
+
+
+body {
+
+    position: relative;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   PREVENT HORIZONTAL PAGE SLIDING
+
+\========================================================= */
+
+
+
+html,
+
+body {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: hidden;
+
+}
+
+
+
+body {
+
+    position: relative;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CENOTE — IPAD PORTRAIT
+
+   CENTER TOH / BIO-SANCTUARY PAIR
+
+\========================================================= */
+
+
+
+.project-cenote-page .two-image-grid-portrait {
+
+    grid-column: 3 / span 8;
+
+
+
+    justify-self: center;
+
+
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+
+/* =========================================================
+
+   RUSSELL — IPAD PORTRAIT
+
+   SINGLE-COLUMN EDITORIAL LAYOUT
+
+   SLIGHTLY LARGER MEDIA
+
+\========================================================= */
+
+
+
+.project-russell-page .project-grid {
+
+    grid-template-columns: 1fr !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: 0% !important;
+
+    margin-right: 0% !important;
+
+
+
+    column-gap: 0 !important;
+
+    row-gap: 22px !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REMOVE ALL DESKTOP COLUMN SPANS
+
+   EACH MEDIA ELEMENT GETS ITS OWN ROW
+
+\========================================================= */
+
+
+
+.project-russell-page .span-12,
+
+.project-russell-page .span-10,
+
+.project-russell-page .span-8,
+
+.project-russell-page .span-6,
+
+.project-russell-page .span-4,
+
+.project-russell-page .span-3,
+
+
+
+.project-russell-page .span-10-centered,
+
+.project-russell-page .span-8-centered,
+
+.project-russell-page .span-8-centered_2,
+
+.project-russell-page .span-6-centered,
+
+.project-russell-page .span-4-centered,
+
+
+
+.project-russell-page .slider-medium,
+
+.project-russell-page .roof-plan-media,
+
+.project-russell-page .project-media-centered,
+
+.project-russell-page .russell-interactive-cover {
+
+
+
+    grid-column: 1 / -1 !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RUSSELL — IPAD PORTRAIT
+
+   REMOVE VIDEOS
+
+\========================================================= */
+
+
+
+.project-russell-page .project-video-wrapper {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SLIDER / VIDEO PAIR
+
+   SLIDER ONLY
+
+\========================================================= */
+
+
+
+.project-russell-page .project-media-pair {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SLIDER TAKES ENTIRE ROW
+
+\========================================================= */
+
+
+
+.project-russell-page .project-slider {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    flex: none !important;
+
+
+
+    margin: 0 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SLIDER IMAGES
+
+\========================================================= */
+
+
+
+.project-russell-page .project-slider .slider-image {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+
+
+    object-fit: cover !important;
+
+}
+
+
+
+/* =========================================================
+
+   STADIA — IPAD PORTRAIT
+
+   SCALE PROJECT CONTENT UP + CENTER
+
+\========================================================= */
+
+
+
+.project-stadium-page .project-content {
+
+    width: 120%;
+
+    max-width: none;
+
+
+
+    padding-left: 44px;
+
+    padding-right: 44px;
+
+
+
+    box-sizing: border-box;
+
+
+
+    /* CENTER THE EXTRA 20% */
+
+    margin-left: -10% !important;
+
+    margin-right: -10% !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MAIN STADIA CONTENT / GRID
+
+   KEEP 120% SCALE + CENTER
+
+\========================================================= */
+
+
+
+.project-stadium-page .project-grid,
+
+.project-stadium-page .stadia-project-grid {
+
+    width: 100%;
+
+    max-width: none;
+
+
+
+    /* CENTER THE EXTRA 20% */
+
+    margin-left: 0% !important;
+
+    margin-right: 0% !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MEDIA
+
+\========================================================= */
+
+
+
+.project-stadium-page img,
+
+.project-stadium-page video {
+
+    max-width: 120%;
+
+}
+
+
+
+/* =========================================================
+
+   EACH MEDIA ITEM GETS ITS OWN ROW
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid > .stadia-media-slot,
+
+.project-stadium-page .stadia-two-grid-reversed > .stadia-media-slot {
+
+    grid-column: 1 / -1 !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+
+
+    transform: none !important;
+
+    justify-self: center !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SLIDERS
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-concept-slider {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FIRST GROUP
+
+   SLIDER 01 → BOWL OPENING VIDEO
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-bowl-video-slot {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    /*
+
+       REDUCES THE EXCESSIVE DESKTOP GAP
+
+       WHILE RETAINING BREATHING ROOM
+
+    */
+
+
+
+    margin-top: -250px !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SECOND GROUP
+
+   SEPARATION FROM FIRST GROUP
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid-reversed {
+
+    margin-top: -80px !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SECOND GROUP ORDER
+
+   SLIDER 02 → RAKING VIDEO
+
+\========================================================= */
+
+
+
+.project-stadium-page
+
+.stadia-two-grid-reversed
+
+.stadia-slider-slot {
+
+    order: 1;
+
+}
+
+
+
+
+
+.project-stadium-page
+
+.stadia-two-grid-reversed
+
+.stadia-video-slot {
+
+    order: 2;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-top: 0 !important;
+
+
+
+    overflow: visible !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RAKING VIDEO
+
+   REMOVE DESKTOP CROP
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-video-stage {
+
+    width: 100% !important;
+
+    height: auto !important;
+
+
+
+    position: relative !important;
+
+
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+    left: auto !important;
+
+    right: auto !important;
+
+
+
+    margin: 0 !important;
+
+
+
+    overflow: visible !important;
+
+
+
+    transform: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RAKING VIDEO
+
+   RESTORE COMPLETE FRAME
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-loop-video {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    height: auto !important;
+
+
+
+    max-width: none !important;
+
+
+
+    position: relative !important;
+
+
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+    left: auto !important;
+
+    right: auto !important;
+
+
+
+    margin: 0 !important;
+
+
+
+    transform: none !important;
+
+
+
+    object-fit: contain !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REMOVE OLD DESKTOP CROP GUIDE
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-video-bounds {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   STADIA — IPAD PORTRAIT
+
+   VISIBILITY COMPARISON — SCALE DOWN
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-wide-slot {
+
+    width: 90% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+}
+
+
+
+/* =========================================================
+
+   STADIA — IPAD PORTRAIT
+
+   DEVELOPMENT MODEL GRID — VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-development-grid {
+
+    position: relative !important;
+
+    transform: translateY(140px) !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   STADIA — IPAD PORTRAIT
+
+   FINAL DRAWING — VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-final-slot {
+
+    position: relative !important;
+
+    transform: translateY(80px) !important;
+
+}
+
+
+
+/* =========================================================
+
+   SUE MANGO — IPAD PORTRAIT
+
+   CONCEPT DIAGRAMS — CENTER
+
+\========================================================= */
+
+
+
+.five-image-grid {
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+
+
+    justify-self: center !important;
+
+}
+
+
+
+/* =========================================================
+
+   MENTORSHIP — IPAD PORTRAIT
+
+   THREE IMAGE GRID — MOVE CLOSER TO COVER
+
+\========================================================= */
+
+
+
+.project-mentorship-page .mentorship-three-image-grid {
+
+    position: relative !important;
+
+    transform: translateY(-70px) !important;
+
+}
+
+/* =========================================================
+
+   PERSONAL WORK — IPAD PORTRAIT
+
+\========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   IMAGE / TITLE SECTIONS
+
+   70% IMAGE / 30% TEXT
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-section,
+
+.project-personal-page .personal-photoshop-section {
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        minmax(0, 70fr)
+
+        minmax(0, 30fr) !important;
+
+
+
+    column-gap: 32px !important;
+
+
+
+    align-items: center !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   GENERAL IMAGES — LARGER
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-image,
+
+.project-personal-page .personal-photoshop-image {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+}
+
+
+
+.project-personal-page .personal-purpose-image img,
+
+.project-personal-page .personal-photoshop-image img {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    height: auto !important;
+
+
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLE COLUMNS
+
+   SMALLER THAN IMAGES + BREATHING ROOM
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy,
+
+.project-personal-page .personal-photoshop-copy {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin: 0 !important;
+
+
+
+    padding-left: 5px !important;
+
+    padding-right: 18px !important;
+
+
+
+    box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLE FONT SIZE
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy h2,
+
+.project-personal-page .personal-photoshop-copy h2 {
+
+    font-size: 20px !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLES ONLY
+
+   REMOVE DESCRIPTION TEXT
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy p,
+
+.project-personal-page .personal-photoshop-copy p {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INTERACTIVE AXON — LARGER
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-work-stage {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+.project-personal-page .personal-axon {
+
+    width: 94% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+}
+
+
+
+.project-personal-page .personal-axon-map,
+
+.project-personal-page .personal-axon-image {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REMOVE "REVIT UI BEGINNER TUTORIALS"
+
+\========================================================= */
+
+
+
+.project-personal-page .axon-label-revit,
+
+.project-personal-page .axon-overlay-label {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INTERACTION POPUPS
+
+   REMOVE CAPTION / DESCRIPTION TEXT
+
+\========================================================= */
+
+
+
+.project-personal-page .axon-video-panel p,
+
+.project-personal-page .axon-video-panel .caption,
+
+.project-personal-page .axon-video-panel .description {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LAST IMAGE — LARGER
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-material-section {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+.project-personal-page .personal-material-image {
+
+    width: 96% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+}
+
+
+
+.project-personal-page .personal-material-image img {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    height: auto !important;
+
+
+
+    max-width: none !important;
+
+}
+
+}
+/* =========================================================
+
+   IPAD — LANDSCAPE
+
+\========================================================= */
+
+
+
+@media
+
+    (orientation: landscape)
+
+    and (min-width: 601px)
+
+    and (min-height: 501px)
+
+    and (max-width: 1400px)
+
+    and (hover: none)
+
+    and (pointer: coarse) {
+
+
+
+
+
+    /* =====================================================
+
+       RESPONSIVE ELEMENTS
+
+       HIDDEN IN IPAD LANDSCAPE
+
+    ===================================================== */
+
+
+
+    .toc-mobile-section,
+
+    .toc-mobile-stage,
+
+    .toc-landscape-section,
+
+    .resume-label-mobile,
+
+    .project-personal-page .personal-back-mobile {
+
+        display: none;
+
+    }
+
+
+
+    .resume-page ~ .bottom-nav .resume-mobile-contents {
+
+        display: none !important;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       CENOTE — IPAD LANDSCAPE
+
+       CENTER TOH / BIO-SANCTUARY PAIR
+
+    ===================================================== */
+
+
+
+    .project-cenote-page .two-image-grid-portrait {
+
+        grid-column: 1 / -1;
+
+
+
+        width: 70%;
+
+        max-width: 750px;
+
+
+
+        justify-self: center;
+
+
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — IPAD LANDSCAPE
+
+       TOC IMAGE
+
+    ===================================================== */
+
+
+
+    .home-page .toc-base {
+
+        content: url("Projects/toc-base-landscape.png");
+
+    }
+
+
+
+
+
+    /* =====================================================
+
+       INDEX — IPAD LANDSCAPE
+
+       TOC POSITION + SCALE
+
+    ===================================================== */
+
+
+
+    .home-page .toc-stage {
+
+        transform:
+
+            translateY(14px)
+
+            scale(1.02);
+
+
+
+        transform-origin: top center;
+
+    }
+
+
+
+/* =========================================================
+
+   STADIA — IPAD LANDSCAPE
+
+   TWO-COLUMN PARAMETRIC STUDIES
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid,
+
+.project-stadium-page .stadia-two-grid-reversed {
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        minmax(0, 1fr)
+
+        minmax(0, 1fr) !important;
+
+
+
+    width: 92% !important;
+
+    max-width: none !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+
+
+    column-gap: 36px !important;
+
+    row-gap: 0 !important;
+
+
+
+    align-items: center !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — TWO-GRID ROW 01
+
+   WHOLE-ROW VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid {
+
+    position: relative !important;
+
+
+
+    top: -230px !important;
+
+
+
+    margin-bottom: 20px !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — TWO-GRID ROW 02
+
+   WHOLE-ROW VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid-reversed {
+
+    position: relative !important;
+
+
+
+    top: -500px !important;
+
+
+
+    margin-bottom: -80px !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — MEDIA SLOTS
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-two-grid > .stadia-media-slot,
+
+.project-stadium-page .stadia-two-grid-reversed > .stadia-media-slot {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    min-width: 0 !important;
+
+
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — CONCEPT SLIDERS
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-concept-slider,
+
+.project-stadium-page .stadia-concept-track {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+.project-stadium-page .stadia-concept-slide {
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    max-width: none !important;
+
+
+
+    object-fit: contain !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — VIDEO 01
+
+   BOWL OPENING
+
+   INTERNAL VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-bowl-video-slot {
+
+    position: relative !important;
+
+
+
+    transform: translateY(45px) !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — VIDEO 02
+
+   RAKING EFFECT
+
+   INTERNAL VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page
+
+.stadia-two-grid-reversed
+
+.stadia-video-slot {
+
+    position: relative !important;
+
+
+
+    transform: translateY(-60px) !important;
+
+}
+
+
+
+/* =========================================================
+
+   STADIA — VISIBILITY COMPARISON
+
+   MOVE ENTIRE SECTION UP
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-wide-slot {
+
+    position: relative !important;
+
+
+
+    top: -400px !important;
+
+
+
+    margin-bottom: -220px !important;
+
+}
+
+
+
+/* =========================================================
+
+   STADIA — DEVELOPMENT TWO-IMAGE GROUP
+
+   INDEPENDENT VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-development-grid {
+
+    position: relative !important;
+
+
+
+    top: -30px !important;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+
+   STADIA — FINAL DRAWING
+
+   INDEPENDENT VERTICAL CONTROL
+
+\========================================================= */
+
+
+
+.project-stadium-page .stadia-final-slot {
+
+    position: relative !important;
+
+
+
+    top: -60px !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SUE MANGO — IPAD LANDSCAPE
+
+   CENTER FIVE-IMAGE GROUP
+
+\========================================================= */
+
+
+
+.project-sue-page .five-image-grid {
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+
+
+    justify-self: center !important;
+
+}
+
+
+
+/* =========================================================
+
+   MENTORSHIP — IPAD LANDSCAPE
+
+   LAST THREE IMAGES — MOVE UP
+
+\========================================================= */
+
+
+
+.project-mentorship-page .mentorship-three-image-grid {
+
+    position: relative !important;
+
+    transform: translateY(-90px) !important;
+
+}
+
+
+
+/* =========================================================
+
+   PERSONAL WORK — IPAD LANDSCAPE
+
+   EDITORIAL IMAGE / TITLE LAYOUT
+
+\========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   MASTER CONTROLS
+
+\========================================================= */
+
+
+
+.project-personal-page {
+
+    --personal-landscape-title-size: 17px;
+
+    --personal-landscape-column-gap: 40px;
+
+    --personal-landscape-title-margin: 12px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   IMAGE / TITLE SECTIONS
+
+   IMAGE DOMINANT
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-section,
+
+.project-personal-page .personal-photoshop-section {
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        minmax(0, 76fr)
+
+        minmax(0, 24fr) !important;
+
+
+
+    column-gap: var(--personal-landscape-column-gap) !important;
+
+
+
+    align-items: center !important;
+
+
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   IMAGES
+
+   KEEP LARGE
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-image,
+
+.project-personal-page .personal-photoshop-image {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin: 0 !important;
+
+}
+
+
+
+.project-personal-page .personal-purpose-image img,
+
+.project-personal-page .personal-photoshop-image img {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    height: auto !important;
+
+
+
+    max-width: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLES
+
+   SMALLER + MANUAL SPACING CONTROL
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy,
+
+.project-personal-page .personal-photoshop-copy {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+
+
+    margin: 0 !important;
+
+
+
+    padding-left: var(--personal-landscape-title-margin) !important;
+
+    padding-right: var(--personal-landscape-title-margin) !important;
+
+
+
+    box-sizing: border-box !important;
+
+}
+
+
+
+.project-personal-page .personal-purpose-copy h2,
+
+.project-personal-page .personal-photoshop-copy h2 {
+
+    font-size: var(--personal-landscape-title-size) !important;
+
+
+
+    margin-top: 0 !important;
+
+    margin-bottom: 0 !important;
+
+
+
+    line-height: 1.2 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REMOVE CAPTIONS
+
+   
+   KEEP TITLES ONLY
+
+\========================================================= */
+
+
+
+.project-personal-page .personal-purpose-copy p,
+
+.project-personal-page .personal-photoshop-copy p {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INTERACTIVE AXON
+
+   REMOVE REVIT UI BEGINNER LABEL
+
+\========================================================= */
+
+
+
+.project-personal-page .axon-label-revit,
+
+.project-personal-page .axon-overlay-label {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+
+   VIDEO / INTERACTION POPUPS
+
+   REMOVE CAPTION TEXT
+
+\========================================================= */
+
+
+
+.project-personal-page .axon-video-panel p,
+
+.project-personal-page .axon-video-panel .caption,
+
+.project-personal-page .axon-video-panel .description {
+
+    display: none !important;
+
+}
+
+
+
+
+
+/* =========================================================
+   PERSONAL WORK — IPAD LANDSCAPE
+   AXON VIDEO CLOSE BUTTON — WHITE
+========================================================= */
+
+.project-personal-page .axon-video-close {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+
+   END — IPAD LANDSCAPE
+
+\========================================================= */
+
+
+
+}

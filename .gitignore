@@ -1,0 +1,17 @@
+# VS Code local settings
+.vscode/
+
+# Windows metadata
+desktop.ini
+Thumbs.db
+
+958c7a29-1b5e-462a-87be-146b672d19b2.png
+
+Portfolio Website Tools.html
+Portfolio Website Tools_files/
+
+# Illustrator source files
+*.ai
+
+# PDF source files
+*.pdf

@@ -1,0 +1,718 @@
+/* =========================================================
+   PROJECT BRIEF BUTTON
+   MATCH BOTTOM NAVIGATION
+========================================================= */
+
+.project-personal-page .brief-toggle {
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: "Questrial", sans-serif;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: inherit;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PERSONAL WORK PAGE
+========================================================= */
+
+.project-personal-page {
+    --project-accent: #8186bd;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.personal-work-content {
+    width: 100%;
+}
+
+
+/* =========================================================
+   MAIN AXONOMETRIC STAGE
+========================================================= */
+
+.personal-work-stage {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    column-gap: 16px;
+
+    padding:
+        20px
+        var(--page-margin)
+        100px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   AXONOMETRIC OVERLAY LABEL
+========================================================= */
+
+.axon-overlay-label {
+    position: absolute;
+
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.15;
+
+    color: #111111;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   REVIT UI BEGINNER TUTORIALS LABEL
+========================================================= */
+
+.axon-label-revit {
+    top: -2.5%;
+    left: -10.5%;
+}
+
+
+/* =========================================================
+   PURPOSE AND REASON
+   INDEPENDENT CENTERED LAYOUT
+========================================================= */
+
+.personal-purpose-section {
+    width: calc(100% - 80px);
+    max-width: 1780px;
+
+    margin:
+        55px
+        auto
+        75px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1050px)
+        minmax(420px, 650px);
+
+    column-gap: 80px;
+
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   PURPOSE IMAGE
+========================================================= */
+
+.personal-purpose-image {
+    width: 100%;
+    margin: 0;
+}
+
+.personal-purpose-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   PURPOSE TEXT
+========================================================= */
+
+.personal-purpose-copy {
+    width: 100%;
+}
+
+/* TITLE */
+
+.personal-purpose-copy h2 {
+    margin:
+        0
+        0
+        22px;
+
+    font-family: "Questrial", sans-serif;
+
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+
+/* DESCRIPTION */
+
+.personal-purpose-copy p {
+    margin: 0;
+
+    font-family: "Questrial", sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+/* =========================================================
+   MAIN AXONOMETRIC
+   10-COLUMN SPAN
+========================================================= */
+
+.personal-axon {
+    grid-column: 2 / span 10;
+
+    width: 100%;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   INTERACTIVE AXONOMETRIC CONTAINER
+========================================================= */
+
+.personal-axon-map {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   AXONOMETRIC IMAGE
+========================================================= */
+
+.personal-axon-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   FUTURE INTERACTIVE HOTSPOTS
+========================================================= */
+
+.personal-hotspot {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+
+/* =========================================================
+   AXONOMETRIC — VIDEO HOTSPOTS
+========================================================= */
+
+.axon-video-hotspot {
+    position: absolute;
+
+    z-index: 10;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HOTSPOT LOCATIONS
+========================================================= */
+
+/*
+    INITIAL POSITIONS.
+
+    left / top / width / height are percentages of the
+    axonometric image.
+
+    We will fine-tune these once we establish the exact
+    clickable rectangles.
+*/
+
+
+.hotspot-video-01 {
+    left: 7%;
+    top: 7%;
+    width: 18%;
+    height: 17%;
+}
+
+
+.hotspot-video-02 {
+    left: 7%;
+    top: 29%;
+    width: 18%;
+    height: 17%;
+}
+
+
+.hotspot-video-03 {
+    left: 7%;
+    top: 51%;
+    width: 18%;
+    height: 17%;
+}
+
+
+.hotspot-video-04 {
+    left: 7%;
+    top: 72%;
+    width: 18%;
+    height: 17%;
+}
+
+
+.hotspot-video-05 {
+    left: 76%;
+    top: 47%;
+    width: 13%;
+    height: 15%;
+}
+
+
+.hotspot-video-06 {
+    left: 86%;
+    top: 54%;
+    width: 11%;
+    height: 15%;
+}
+
+/* =========================================================
+   AXONOMETRIC — VIDEO PANEL
+========================================================= */
+
+.axon-video-panel {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Keeps bottom navigation visible */
+    bottom: 52px;
+
+    z-index: 1200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        70px
+        var(--page-margin);
+
+    box-sizing: border-box;
+
+    background: #f5f5f2;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* =========================================================
+   ACTIVE VIDEO PANEL
+========================================================= */
+
+.axon-video-panel.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   VIDEO FRAME
+========================================================= */
+
+.axon-video-frame {
+    width: min(
+        1200px,
+        calc(100vw - (var(--page-margin) * 2))
+    );
+
+    aspect-ratio: 16 / 9;
+}
+
+
+.axon-video-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.axon-video-close {
+    position: absolute;
+
+    top: 28px;
+    right: 35px;
+
+    z-index: 2;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #111111;
+
+    font-family: inherit;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   PHOTOSHOP PERSPECTIVE
+   INDEPENDENT CENTERED LAYOUT
+========================================================= */
+
+.personal-photoshop-section {
+    grid-column: 1 / -1;
+
+    width: calc(100% - 80px);
+    max-width: 1780px;
+
+    margin:
+        55px
+        auto
+        75px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1050px)
+        minmax(420px, 650px);
+
+    column-gap: 80px;
+
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PHOTOSHOP IMAGE
+========================================================= */
+
+.personal-photoshop-image {
+    width: 100%;
+
+    margin: 0;
+}
+
+.personal-photoshop-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   PHOTOSHOP TEXT
+========================================================= */
+
+.personal-photoshop-copy {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PHOTOSHOP TITLE
+========================================================= */
+
+.personal-photoshop-copy h2 {
+    margin:
+        0
+        0
+        22px;
+
+    font-family: "Questrial", sans-serif;
+
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   PHOTOSHOP DESCRIPTION
+========================================================= */
+
+.personal-photoshop-copy p {
+    margin: 0;
+
+    font-family: "Questrial", sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+/* =========================================================
+   FULL MATERIAL ACCESS SECTION
+========================================================= */
+
+.personal-material-section {
+    grid-column: 1 / span 10;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 55px;
+    margin-bottom: 90px;
+}
+
+
+/* =========================================================
+   MATERIAL IMAGE
+========================================================= */
+
+.personal-material-image {
+    width: 30%;
+
+    margin: 0;
+}
+
+.personal-material-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   MATERIAL ACCESS TEXT
+========================================================= */
+
+.personal-material-text {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 16px;
+}
+
+.material-access-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.material-lock {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* =========================================================
+   MATERIAL ACCESS BUTTON
+========================================================= */
+
+.material-access-trigger {
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: "Questrial", sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    color: #111111;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MATERIAL ACCESS HOVER
+========================================================= */
+
+.material-access-trigger:hover {
+    opacity: 0.55;
+}
+
+/* =========================================================
+   COURSE OVERVIEW — YOUTUBE PANEL
+========================================================= */
+
+.course-video-panel {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /*
+        Leaves the global bottom navigation visible.
+        Adjust only if your nav height changes.
+    */
+    bottom: 52px;
+
+    z-index: 1200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        70px
+        var(--page-margin);
+
+    box-sizing: border-box;
+
+    background: #f5f5f2;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* =========================================================
+   ACTIVE STATE
+========================================================= */
+
+.course-video-panel.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   VIDEO FRAME
+========================================================= */
+
+.course-video-frame {
+    width: min(
+        1200px,
+        calc(100vw - (var(--page-margin) * 2))
+    );
+
+    aspect-ratio: 16 / 9;
+}
+
+
+.course-video-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.course-video-close {
+    position: absolute;
+
+    top: 28px;
+    right: 35px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #111111;
+
+    font-family: inherit;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COURSE OVERVIEW NAV BUTTON
+========================================================= */
+
+.course-overview-toggle {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    cursor: pointer;
+}

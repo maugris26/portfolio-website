@@ -582,7 +582,7 @@
 
     transform:
         translateX(0px)
-        translateY(160px);
+        translateY(115px);
 }
 
 /* VIDEO */
@@ -611,7 +611,7 @@
     width: 100%;
     height: 750px;
 
-    transform: translateY(230px);
+    transform: translateY(260px);
 
     overflow: hidden;
 

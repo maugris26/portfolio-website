@@ -3329,6 +3329,14 @@
     }
 }
 
+/* =========================================================
+   IPHONE PORTRAIT
+   HIDE BOTTOM NAV LINE WHEN PROJECT BRIEF IS OPEN
+========================================================= */
+
+.project-page .bottom-nav.brief-open::before {
+    display: none !important;
+}
 
 /* =========================================================
    IPHONE — LANDSCAPE
